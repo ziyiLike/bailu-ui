@@ -26,7 +26,11 @@
     "examples/**/*.ts",
     "examples/**/*.d.ts",
     "examples/**/*.tsx",
-    "examples/**/*.vue"
+    "examples/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "typings",
   ],
   "exclude": [
     "node_modules"

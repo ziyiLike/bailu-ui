@@ -1,5 +1,5 @@
 <template>
-  <lu-button>123</lu-button>
+  <lu-button type="primary">123</lu-button>
 </template>
 
 <script lang="ts">

@@ -1,21 +1,18 @@
 <template>
-  <div :class="['hq-button', 'hq-btn-' + props.type]">
+  <div :class="['lu-button', 'lu-btn-' + props.type]">
     <slot></slot>
   </div>
 </template>
 
-<script>
-export default {
-  name: "lu-button"
-}
-</script>
+<script lang="ts" setup>
+import { PropType } from 'vue';
+import type { ButtonType } from './index'
 
-<script setup>
 const props = defineProps({
   type: {
-    type: String,
+    type: String as PropType<ButtonType>,
     default: "default",
-    validator: value => {
+    validator: (value: ButtonType) => {
       const types = ["default", "primary"]
       return types.includes(value)
     }
@@ -25,7 +22,7 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-.hq-button {
+.lu-button {
   padding: 0.4rem 1rem;
   margin: 4px;
   border-radius: 4px;
@@ -43,31 +40,31 @@ const props = defineProps({
   border: 1px solid #99999944;
 }
 
-.hq-btn-default {
+.lu-btn-default {
   color: #000;
 }
 
-.hq-btn-default:hover {
+.lu-btn-default:hover {
   color: #409eff;
   background-color: #e2f1ff;
   border: 1px solid #fff;
 }
 
-.hq-btn-primary {
+.lu-btn-primary {
   background-color: #409eff;
   box-shadow: 0 0 2px #409eff;
 }
 
-.hq-btn-primary:hover {
+.lu-btn-primary:hover {
   background-color: #1587ff;
 }
 
-.hq-btn-success {
+.lu-btn-success {
   background-color: #67c23a;
   box-shadow: 0 0 2px #67c23a;
 }
 
-.hq-btn-success:hover {
+.lu-btn-success:hover {
   background-color: #53bb18;
 }
 </style>

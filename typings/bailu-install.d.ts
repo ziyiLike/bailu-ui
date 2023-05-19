@@ -1,6 +1,6 @@
 import type { App } from '@vue/runtime-core'
 
-export interface IBaiLuAPI {
+export interface IBaiLuUI {
   getFilePath: () => Promise<void>;
 }
 
