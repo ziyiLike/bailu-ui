@@ -6,7 +6,7 @@
 
 A comprehensive Vue UI components library based on the [BaiLuUI](https://).
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)]()
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ziyiLike/bailu-ui)
 
 </div>
 
