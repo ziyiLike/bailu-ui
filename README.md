@@ -1,24 +1,42 @@
-# bailu-ui
+<div align="center">
+  <h1>白露UI</h1>
+</div>
 
-## Project setup
-```
-yarn install
+<div align="center">
+
+A comprehensive Vue UI components library based on the [BaiLuUI](https://).
+
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)]()
+
+</div>
+
+<div align="center">
+
+English | [简体中文](./README.zh-CN.md)
+
+</div>
+
+# Installation
+
+Available as an [npm package](https://www.npmjs.com/package/bailu-ui)
+
+```bash
+// with npm
+npm install bailu-ui
+
+// with yarn
+yarn add bailu-ui
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# Examples
 
-### Compiles and minifies for production
-```
-yarn build
-```
+```typescript
+import { createApp } from 'vue'
+import BaiLuUI from 'bailu-ui';
+import App from './App.vue';
+import 'bailu-ui/css';
 
-### Lints and fixes files
+const app = createApp(App);
+app.use(BaiLuUI);
+app.mount('#app');
 ```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
