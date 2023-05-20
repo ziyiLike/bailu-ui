@@ -1,12 +1,9 @@
 <template>
-  <lu-button type="primary">123</lu-button>
+  <lu-button type="primary">白露Button</lu-button>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({
-  name: 'App',
-});
+<script lang="ts" setup>
+
 </script>
 
 <style lang="scss">

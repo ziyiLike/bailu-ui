@@ -1,13 +1,13 @@
-import LuButton from "./src/index.vue"
-import type { App } from '@vue/runtime-core'
+import Button from "./src/index.vue"
+import useWidthInstall from '../../utils/useWidthInstall'
 
-const install = (app: App) => {
-  app.component('lu-button', LuButton)
-}
+const LuButton = useWidthInstall(Button)
 
 export { LuButton }
 
-export default {
-  install
-}
+export default LuButton
+
+export type { ButtonInstance } from './src/instance'
+
+
 

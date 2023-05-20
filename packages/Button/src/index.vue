@@ -5,19 +5,13 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType } from 'vue';
-import type { ButtonType } from './index'
+import { buttonProps } from './props'
 
-const props = defineProps({
-  type: {
-    type: String as PropType<ButtonType>,
-    default: "default",
-    validator: (value: ButtonType) => {
-      const types = ["default", "primary"]
-      return types.includes(value)
-    }
-  }
+defineOptions({
+  name: 'lu-button'
 })
+
+const props = defineProps(buttonProps())
 
 </script>
 

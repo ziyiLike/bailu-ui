@@ -7,7 +7,7 @@ const components = [
 
 const install = (app: App) => {
 
-  components.forEach((c: any) => app.use(c))
+  components.forEach((c) => app.use(c))
 }
 
 export default {

@@ -1,13 +1,22 @@
-import {defineConfig} from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [vue(),
+  plugins: [
+    vue(),
     dts({
-      tsConfigFilePath: './tsconfig.json'
+      entryRoot: './packages',
+      insertTypesEntry: true,
+      outputDir: './dist/typings',
     })
   ],
+  resolve: {
+    alias: {
+      '@': '/examples',
+      '~': '/'
+    },
+  },
   build: {
     lib: {
       entry: './packages/index.ts', // 打包路径
@@ -15,12 +24,10 @@ export default defineConfig({
       fileName: (format) => `bailu-ui.${format}.js`
     },
     rollupOptions: {
-      external: ["vue", "vue-tsc", "@vue/compiler-sfc"],
+      external: ["vue"],
       output: {
         globals: {
-          vue: "vue",
-          "vue-tsc": "vue-tsc",
-          "@vue/compiler-sfc": "@vue/compiler-sfc"
+          vue: "vue"
         }
       }
     },
