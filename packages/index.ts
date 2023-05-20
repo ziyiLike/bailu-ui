@@ -1,7 +1,7 @@
 import LuButton from '../packages/Button'
-import type { App } from '@vue/runtime-core'
+import type { App, Plugin } from '@vue/runtime-core'
 // 组件列表
-const components = [
+const components: Plugin[] = [
   LuButton
 ]
 
