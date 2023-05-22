@@ -8,7 +8,7 @@ export default defineConfig({
     dts({
       entryRoot: './packages',
       insertTypesEntry: true,
-      outputDir: './dist/typings',
+      outputDir: './dist/typings'
     })
   ],
   resolve: {
