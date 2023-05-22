@@ -1,17 +1,5 @@
-import LuButton from '../packages/Button'
-import type { App } from '@vue/runtime-core'
-// 组件列表
-const components = [
-  LuButton
-]
+export { default } from './bailu-install'
+export { default as LuButton } from './Button'
+export type { ButtonInstance } from './Button'
 
-const install = (app: App) => {
-
-  components.forEach((c) => app.use(c))
-}
-
-export default {
-  install,
-  ...components
-}
-
+export type { } from './components';
