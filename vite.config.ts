@@ -1,10 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 export default defineConfig({
+  define: {
+    __VERSION__: JSON.stringify(process.env.npm_package_version)
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./packages/styles/scss/coolicons.scss";`
+      }
+    }
+  },
   plugins: [
     vue(),
+    vueJsx(),
     dts({
       entryRoot: './packages',
       insertTypesEntry: true,
@@ -32,13 +44,13 @@ export default defineConfig({
       }
     },
     minify: 'terser', // Vite 2.6.x 以上需要配置 minify: "terser", terserOptions 才能生效
-    terserOptions: { // 在打包代码时移除 console、debugger 和 注释
+    terserOptions: {
       compress: {
-        drop_console: true, // 生产环境时移除console
+        drop_console: true,
         drop_debugger: true
       },
       format: {
-        comments: false // 删除注释comments
+        comments: false
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "bailu-ui",
-  "version": "0.1.25",
+  "version": "0.1.41",
   "type": "module",
   "license": "MIT",
   "main": "./dist/bailu-ui.umd.js",
@@ -19,8 +19,9 @@
     "dist/*"
   ],
   "scripts": {
-    "serve": "vite serve --host 0.0.0.0  --port=10010",
+    "dev": "vite serve --host 0.0.0.0  --port=10010",
     "pub": "npm publish",
+    "build:helper": "node build/build-helper.cjs",
     "build": "vue-tsc --noEmit && vite build",
     "check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
@@ -31,12 +32,14 @@
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/compiler-sfc": "^3.3.4",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "components-helper": "^2.1.4",
     "core-js": "^3.8.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
@@ -48,5 +51,10 @@
     "vite-plugin-dts": "^2.3.0",
     "vue": "^3.3.4",
     "vue-tsc": "^1.6.5"
-  }
+  },
+  "vetur": {
+    "tags": "./dist/json/tags.json",
+    "attributes": "./dist/json/attributes.json"
+  },
+  "web-types": "./dist/json/web-types.json"
 }
