@@ -10,7 +10,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./packages/styles/scss/coolicons.scss";`
+        additionalData: `@import "/packages/styles/scss/style.scss";`,
       }
     }
   },
@@ -26,14 +26,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/examples',
-      '~': '/'
+      '~': './'
     },
   },
   build: {
     lib: {
       entry: './packages/index.ts', // 打包路径
       name: 'BaiLuUI',
-      fileName: (format) => `bailu-ui.${format}.js`
+      fileName: (format) => `bailu-ui.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],

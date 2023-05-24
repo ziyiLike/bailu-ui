@@ -17,6 +17,10 @@ const iconName = computed(() => {
 })
 
 const iconSize = computed(() => {
-  return typeof props.size === 'number' ? `${props.size}px` : props.size
+  let _size = typeof props.size === 'number' ? `${props.size}px` : props.size
+  if (!_size) {
+    _size = '24px'
+  }
+  return _size
 })
 </script>

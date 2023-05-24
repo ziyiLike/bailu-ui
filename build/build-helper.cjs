@@ -4,6 +4,14 @@
 */
 const { main } = require('components-helper')
 
+// Judge the json folder exists
+const fs = require('fs')
+const path = require('path')
+const jsonPath = path.resolve(__dirname, '../dist/json')
+if (!fs.existsSync(jsonPath)) {
+  fs.mkdirSync(jsonPath)
+}
+
 main({
   name: 'BaiLuUI',
   version: require('../package.json').version,

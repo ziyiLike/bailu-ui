@@ -11,7 +11,7 @@
 <script lang="tsx" setup>
 
 const ButtonGroup = <>
-  <lu-button icon="CloseSM" type="primary">Primary</lu-button>
+  <lu-button icon="CaretDownMD" type="primary">Primary</lu-button>
   <lu-button type="success">Success</lu-button>
   <lu-button type="warning">Warning</lu-button>
   <lu-button type="danger">Danger</lu-button>

@@ -1,4 +1,4 @@
-import LuButton from '../packages/components/Button/index'
+import LuButton from '../packages/components/Button'
 import type { App, Plugin } from 'vue';
 // 组件列表
 const components: Plugin[] = [
