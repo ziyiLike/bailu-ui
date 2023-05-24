@@ -13,7 +13,8 @@
       "require": "./dist/bailu-ui.umd.js",
       "types": "./dist/typings/index.d.ts"
     },
-    "./css": "./dist/style.css"
+    "./css": "./dist/style.css",
+    "./components/*": "./dist/components/*"
   },
   "files": [
     "dist/*"
