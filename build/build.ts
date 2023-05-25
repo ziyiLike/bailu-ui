@@ -5,7 +5,7 @@
 import gulp from "gulp";
 import autoprefixer from "gulp-autoprefixer";
 import runCommand from "./run-cmd";
-import { buildPath, packagePath, rootPath } from "./paths";
+import { buildPath, packagePath, rootPath, localePath } from "./paths";
 
 const sass = require('gulp-sass')(require('sass'));
 
@@ -36,6 +36,11 @@ export const buildPackageHelperJson = () => {
   runCommand("pnpm build:helper", rootPath);
 }
 
+// build language package
+export const buildLocale = () => {
+  runCommand("pnpm build:lang", rootPath);
+}
+
 
 // build run time 
 export default gulp.series(
@@ -44,6 +49,7 @@ export default gulp.series(
       buildPackageHelperJson()
       buildStyle()
       buildStyleAll()
+      buildLocale()
     })
   )
 );

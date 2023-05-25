@@ -1,8 +1,10 @@
-import LuButton from '../packages/components/Button'
+import LuButton from '../packages/components/button'
+import LuConfigProvider from './components/config-provider';
 import type { App, Plugin } from 'vue';
 // 组件列表
 const components: Plugin[] = [
-  LuButton
+  LuButton,
+  LuConfigProvider
 ]
 
 const install = (app: App) => {

@@ -9,14 +9,17 @@
 </template>
 
 <script lang="tsx" setup>
+import enUs from '../packages/components/locale/lang/en-us'
 
 const ButtonGroup = <>
-  <lu-button icon="CaretDownMD" type="primary">Primary</lu-button>
-  <lu-button type="success">Success</lu-button>
-  <lu-button type="warning">Warning</lu-button>
-  <lu-button type="danger">Danger</lu-button>
-  <lu-button type="info">Info</lu-button>
-  <lu-button type="text">Text</lu-button>
+  <lu-config-provider locale={enUs}>
+    <lu-button icon="CaretDownMD" type="primary">Primary</lu-button>
+    <lu-button type="success">Success</lu-button>
+    <lu-button type="warning">Warning</lu-button>
+    <lu-button type="danger">Danger</lu-button>
+    <lu-button type="info">Info</lu-button>
+    <lu-button type="text">Text</lu-button>
+  </lu-config-provider>
 </>
 
 </script>

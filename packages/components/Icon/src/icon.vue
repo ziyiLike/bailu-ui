@@ -4,7 +4,7 @@
 
 <script setup lang="tsx">
 import { computed } from 'vue';
-import { iconProps } from './iconProp';
+import { iconProps } from './iconProps';
 
 defineOptions({
   name: 'lu-icon'

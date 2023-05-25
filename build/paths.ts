@@ -8,3 +8,6 @@ export const rootPath = resolve(__dirname, "../");
 
 // 构建目录
 export const buildPath = resolve(rootPath, "./dist");
+
+// 语言包目录
+export const localePath = resolve(__dirname, "./packages/components/locale/lang");
