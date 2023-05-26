@@ -14,7 +14,8 @@
       "types": "./dist/typings/index.d.ts"
     },
     "./css": "./dist/style.css",
-    "./components/*": "./dist/components/*"
+    "./components/*": "./dist/components/*",
+    "./locale/*": "./dist/locale/*"
   },
   "files": [
     "dist/*"
