@@ -1,5 +1,9 @@
 <template>
   <div class="row">
+    <lu-button icon="Moon" @click="changTheme('light')">Light</lu-button>
+    <lu-button icon="Sun" type="default" @click="changTheme('dark')">Dark</lu-button>
+  </div>
+  <div class="row">
     <h3>Button</h3>
   </div>
   <div class="row">
@@ -17,10 +21,17 @@ const ButtonGroup = <>
     <lu-button type="success">Success</lu-button>
     <lu-button type="warning">Warning</lu-button>
     <lu-button type="danger">Danger</lu-button>
-    <lu-button type="info">Info</lu-button>
     <lu-button type="text">Text</lu-button>
   </lu-config-provider>
 </>
+
+const changTheme = (theme: string) => {
+  if (theme === 'light') {
+    document.body.removeAttribute('bailu-theme');
+  } else {
+    document.body.setAttribute('bailu-theme', 'dark')
+  }
+}
 
 </script>
 
@@ -28,6 +39,11 @@ const ButtonGroup = <>
 body {
   margin: 0;
   padding: 0;
+}
+
+body[bailu-theme="dark"] {
+  background-color: #17171A;
+  color: #FFFFFFE6;
 }
 
 .row {

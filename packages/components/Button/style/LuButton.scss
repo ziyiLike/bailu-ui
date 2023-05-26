@@ -1,107 +1,68 @@
-.lu-button {
-  padding: 0.4rem 1rem;
+.lu-btn {
+  padding: 18px 10px;
   margin: 4px;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
-  height: fit-content;
-  width: fit-content;
   color: #fff;
   transition: .3s ease;
   user-select: none;
+  -webkit-user-select: none;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   text-align: center;
   font-size: 16px;
+  height: 32px;
 }
 
 .lu-btn-default {
-  color: #000;
-  border: 1px solid #99999944;
-  background-color: #fff;
+  color: var(--lu-primary-F);
+  border: 1px solid var(--lu-color-border-B);
+  background-color: var(--lu-primary-A);
 
   &:hover {
-    color: #858DE6;
-    background-color: #e2f1ff;
+    color: var(--lu-primary-E);
+    background-color: var(--lu-primary-A);
+    border: 1px solid var(--lu-primary-B);
+  }
+
+  &:active {
+    color: var(--lu-primary-F);
+    background-color: var(--lu-primary-B);
     border: 1px solid #fff;
   }
 
-  &:active {
-    color: #858DE6;
-    background-color: #c5d9ff;
-    border: 1px solid #fff;
+  &:disabled {
+    color: var(--lu-primary-B);
+    background-color: var(--lu-primary-A);
+    border: 1px solid var(--lu-primary-A);
+    cursor: not-allowed;
   }
 }
 
-.lu-btn-primary {
-  background-color: #858DE6;
-  box-shadow: 0 0 2px #858DE6;
-  border: 1px solid #858DE6;
+$themeStatusList : (primary, success, warning, danger);
 
-  &:hover {
-    background-color: #a3a9e9;
-  }
+@each $themeStatus in $themeStatusList {
+  .lu-btn-#{$themeStatus} {
+    background-color: var(--lu-#{$themeStatus}-F);
+    box-shadow: 0 0 2px var(--lu-#{$themeStatus}-F);
+    border: 1px solid var(--lu-#{$themeStatus}-F);
 
-  &:active {
-    background-color: #6c72c6;
-  }
-}
+    &:hover {
+      background-color: var(--lu-#{$themeStatus}-E);
+    }
 
-.lu-btn-success {
-  background-color: #67c23a;
-  box-shadow: 0 0 2px #67c23a;
-  border: 1px solid #67c23a;
+    &:active {
+      background-color: var(--lu-#{$themeStatus}-G);
+    }
 
-  &:hover {
-    background-color: #53bb18;
-  }
-
-  &:active {
-    background-color: #3d8a12;
-  }
-}
-
-.lu-btn-warning {
-  background-color: #e6a23c;
-  box-shadow: 0 0 2px #e6a23c;
-  border: 1px solid #e6a23c;
-
-  &:hover {
-    background-color: #e0931b;
-  }
-
-  &:active {
-    background-color: #b56c15;
-  }
-}
-
-.lu-btn-danger {
-  background-color: #f56c6c;
-  box-shadow: 0 0 2px #f56c6c;
-  border: 1px solid #f56c6c;
-
-  &:hover {
-    background-color: #f78989;
-  }
-
-  &:active {
-    background-color: #d33f3f;
-  }
-}
-
-.lu-btn-info {
-  background-color: #909399;
-  box-shadow: 0 0 2px #909399;
-  border: 1px solid #909399;
-
-  &:hover {
-    background-color: #a6a9ad;
-  }
-
-  &:active {
-    background-color: #6e7074;
+    &:disabled {
+      background-color: var(--lu-#{$themeStatus}-C);
+      border: 1px solid var(--lu-#{$themeStatus}-C);
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -109,13 +70,18 @@
   background-color: transparent;
   box-shadow: none;
   border: none;
-  color: #858DE6;
+  color: var(--lu-text-F);
 
   &:hover {
-    color: #707ae9;
+    color: var(--lu-text-E);
   }
 
   &:active {
-    color: #84a1d8;
+    color: var(--lu-text-G);
+  }
+
+  &:disabled {
+    color: var(--lu-text-C);
+    cursor: not-allowed;
   }
 }

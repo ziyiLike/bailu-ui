@@ -1,0 +1,112 @@
+@import './basic-var.scss';
+
+#{$bailu-theme-tag}{
+  #{$bailu-prefix}primary-G: #{$primary-G};
+  #{$bailu-prefix}primary-F: #{$primary-F};
+  #{$bailu-prefix}primary-E: #{$primary-E};
+  #{$bailu-prefix}primary-D: #{$primary-D};
+  #{$bailu-prefix}primary-C: #{$primary-C};
+  #{$bailu-prefix}primary-B: #{$primary-B};
+  #{$bailu-prefix}primary-A: #{$primary-A};
+
+  #{$bailu-prefix}success-G: #{$success-G};
+  #{$bailu-prefix}success-F: #{$success-F};
+  #{$bailu-prefix}success-E: #{$success-E};
+  #{$bailu-prefix}success-D: #{$success-D};
+  #{$bailu-prefix}success-C: #{$success-C};
+  #{$bailu-prefix}success-B: #{$success-B};
+  #{$bailu-prefix}success-A: #{$success-A};
+
+  #{$bailu-prefix}warning-G: #{$warning-G};
+  #{$bailu-prefix}warning-F: #{$warning-F};
+  #{$bailu-prefix}warning-E: #{$warning-E};
+  #{$bailu-prefix}warning-D: #{$warning-D};
+  #{$bailu-prefix}warning-C: #{$warning-C};
+  #{$bailu-prefix}warning-B: #{$warning-B};
+  #{$bailu-prefix}warning-A: #{$warning-A};
+
+  #{$bailu-prefix}danger-G: #{$danger-G};
+  #{$bailu-prefix}danger-F: #{$danger-F};
+  #{$bailu-prefix}danger-E: #{$danger-E};
+  #{$bailu-prefix}danger-D: #{$danger-D};
+  #{$bailu-prefix}danger-C: #{$danger-C};
+  #{$bailu-prefix}danger-B: #{$danger-B};
+  #{$bailu-prefix}danger-A: #{$danger-A};
+
+  #{$bailu-prefix}text-G: #{$text-G};
+  #{$bailu-prefix}text-F: #{$text-F};
+  #{$bailu-prefix}text-E: #{$text-E};
+  #{$bailu-prefix}text-D: #{$text-D};
+  #{$bailu-prefix}text-C: #{$text-C};
+  #{$bailu-prefix}text-B: #{$text-B};
+  #{$bailu-prefix}text-A: #{$text-A};
+
+  #{$bailu-prefix}color-border-G: #{$color-border-G};
+  #{$bailu-prefix}color-border-F: #{$color-border-F};
+  #{$bailu-prefix}color-border-E: #{$color-border-E};
+  #{$bailu-prefix}color-border-D: #{$color-border-D};
+  #{$bailu-prefix}color-border-C: #{$color-border-C};
+  #{$bailu-prefix}color-border-B: #{$color-border-B};
+  #{$bailu-prefix}color-border-A: #{$color-border-A};
+
+  #{$bailu-prefix}color-fill-G: #{$color-fill-G};
+  #{$bailu-prefix}color-fill-F: #{$color-fill-F};
+  #{$bailu-prefix}color-fill-E: #{$color-fill-E};
+  #{$bailu-prefix}color-fill-D: #{$color-fill-D};
+  #{$bailu-prefix}color-fill-C: #{$color-fill-C};
+  #{$bailu-prefix}color-fill-B: #{$color-fill-B};
+  #{$bailu-prefix}color-fill-A: #{$color-fill-A};
+
+}
+
+#{$bailu-theme-tag}[bailu-theme="dark"]{
+  #{$bailu-prefix}success-G: #{$success-dark-G};
+  #{$bailu-prefix}success-F: #{$success-dark-F};
+  #{$bailu-prefix}success-E: #{$success-dark-E};
+  #{$bailu-prefix}success-D: #{$success-dark-D};
+  #{$bailu-prefix}success-C: #{$success-dark-C};
+  #{$bailu-prefix}success-B: #{$success-dark-B};
+  #{$bailu-prefix}success-A: #{$success-dark-A};
+
+  #{$bailu-prefix}warning-G: #{$warning-dark-G};
+  #{$bailu-prefix}warning-F: #{$warning-dark-F};
+  #{$bailu-prefix}warning-E: #{$warning-dark-E};
+  #{$bailu-prefix}warning-D: #{$warning-dark-D};
+  #{$bailu-prefix}warning-C: #{$warning-dark-C};
+  #{$bailu-prefix}warning-B: #{$warning-dark-B};
+  #{$bailu-prefix}warning-A: #{$warning-dark-A};
+
+  #{$bailu-prefix}danger-G: #{$danger-dark-G};
+  #{$bailu-prefix}danger-F: #{$danger-dark-F};
+  #{$bailu-prefix}danger-E: #{$danger-dark-E};
+  #{$bailu-prefix}danger-D: #{$danger-dark-D};
+  #{$bailu-prefix}danger-C: #{$danger-dark-C};
+  #{$bailu-prefix}danger-B: #{$danger-dark-B};
+  #{$bailu-prefix}danger-A: #{$danger-dark-A};
+
+  #{$bailu-prefix}text-G: #{$text-dark-G};
+  #{$bailu-prefix}text-F: #{$text-dark-F};
+  #{$bailu-prefix}text-E: #{$text-dark-E};
+  #{$bailu-prefix}text-D: #{$text-dark-D};
+  #{$bailu-prefix}text-C: #{$text-dark-C};
+  #{$bailu-prefix}text-B: #{$text-dark-B};
+  #{$bailu-prefix}text-A: #{$text-dark-A};
+
+  #{$bailu-prefix}color-border-G: #{$color-border-dark-G};
+  #{$bailu-prefix}color-border-F: #{$color-border-dark-F};
+  #{$bailu-prefix}color-border-E: #{$color-border-dark-E};
+  #{$bailu-prefix}color-border-D: #{$color-border-dark-D};
+  #{$bailu-prefix}color-border-C: #{$color-border-dark-C};
+  #{$bailu-prefix}color-border-B: #{$color-border-dark-B};
+  #{$bailu-prefix}color-border-A: #{$color-border-dark-A};
+
+  #{$bailu-prefix}color-fill-G: #{$color-fill-dark-G};
+  #{$bailu-prefix}color-fill-F: #{$color-fill-dark-F};
+  #{$bailu-prefix}color-fill-E: #{$color-fill-dark-E};
+  #{$bailu-prefix}color-fill-D: #{$color-fill-dark-D};
+  #{$bailu-prefix}color-fill-C: #{$color-fill-dark-C};
+  #{$bailu-prefix}color-fill-B: #{$color-fill-dark-B};
+  #{$bailu-prefix}color-fill-A: #{$color-fill-dark-A};
+
+
+}
