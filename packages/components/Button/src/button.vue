@@ -1,5 +1,5 @@
 <template>
-  <button :class="['lu-btn', 'lu-btn-' + (props.type || 'primary'), 'lu-btn-disabled']">
+  <button :class="['lu-btn', 'lu-btn-' + (props.type || 'primary'), 'lu-btn-disabled']" type="button">
     <LuIcon style="margin-right: 5px;" :name="props.icon" :color="props.iconColor" :size="props.iconSize"></LuIcon>
     <slot></slot>
   </button>

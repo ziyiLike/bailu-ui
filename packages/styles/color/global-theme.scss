@@ -1,6 +1,6 @@
 @import './basic-var.scss';
 
-#{$bailu-theme-tag}{
+#{$bailu-theme-tag} {
   #{$bailu-prefix}primary-G: #{$primary-G};
   #{$bailu-prefix}primary-F: #{$primary-F};
   #{$bailu-prefix}primary-E: #{$primary-E};
@@ -59,7 +59,17 @@
 
 }
 
-#{$bailu-theme-tag}[bailu-theme="dark"]{
+#{$bailu-theme-tag}[bailu-theme="dark"] {
+
+  #{$bailu-prefix}primary-G: #{$primary-dark-G};
+  #{$bailu-prefix}primary-F: #{$primary-dark-F};
+  #{$bailu-prefix}primary-E: #{$primary-dark-E};
+  #{$bailu-prefix}primary-D: #{$primary-dark-D};
+  #{$bailu-prefix}primary-C: #{$primary-dark-C};
+  #{$bailu-prefix}primary-B: #{$primary-dark-B};
+  #{$bailu-prefix}primary-A: #{$primary-dark-A};
+
+
   #{$bailu-prefix}success-G: #{$success-dark-G};
   #{$bailu-prefix}success-F: #{$success-dark-F};
   #{$bailu-prefix}success-E: #{$success-dark-E};
@@ -107,6 +117,5 @@
   #{$bailu-prefix}color-fill-C: #{$color-fill-dark-C};
   #{$bailu-prefix}color-fill-B: #{$color-fill-dark-B};
   #{$bailu-prefix}color-fill-A: #{$color-fill-dark-A};
-
 
 }

@@ -4,7 +4,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
-  color: #fff;
+  color: #FFFFFF;
   transition: .3s ease;
   user-select: none;
   -webkit-user-select: none;
@@ -15,29 +15,32 @@
   text-align: center;
   font-size: 16px;
   height: 32px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .lu-btn-default {
-  color: var(--lu-primary-F);
-  border: 1px solid var(--lu-color-border-B);
-  background-color: var(--lu-primary-A);
+  color: var(--lu-text-F);
+  border: 1px solid var(--lu-text-C);
+  background-color: var(--lu-text-A);
 
   &:hover {
-    color: var(--lu-primary-E);
-    background-color: var(--lu-primary-A);
-    border: 1px solid var(--lu-primary-B);
+    color: var(--lu-text-G);
+    background-color: var(--lu-text-C);
   }
 
   &:active {
-    color: var(--lu-primary-F);
-    background-color: var(--lu-primary-B);
-    border: 1px solid #fff;
+    color: var(--lu-text-G);
+    background-color: var(--lu-text-C);
+    border: 1px solid var(--lu-text-G);
   }
 
   &:disabled {
-    color: var(--lu-primary-B);
-    background-color: var(--lu-primary-A);
-    border: 1px solid var(--lu-primary-A);
+    color: var(--lu-text-B);
+    background-color: var(--lu-text-A);
+    border: 1px solid var(--lu-text-A);
     cursor: not-allowed;
   }
 }
