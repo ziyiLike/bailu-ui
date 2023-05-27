@@ -1,6 +1,6 @@
 
-<div align="center" style="background:#FFFFFF;height:250px">
-  <image  src="http://81.68.222.165:9000/ziyi-like/BailuLogo.png?Content-Type=image/png"  width=330 height=250/>
+<div align="center" style="background:#FFFFFF;height:120px">
+  <image  src="http://81.68.222.165:9000/ziyi-like/BaiLuLogoWithoutText.png?Content-Type=image/png"  width=120 height=120/>
 </div> 
 
 <div align="center">
