@@ -3,6 +3,9 @@
 </template>
 
 <script setup lang="tsx">
+/**
+ * Open source icon library: https://coolicons.cool/
+ */
 import { computed } from 'vue';
 import { iconProps } from './iconProps';
 

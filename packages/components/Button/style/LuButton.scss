@@ -1,3 +1,5 @@
+@import '../../../styles/color/global-theme.scss';
+
 .lu-btn {
   padding: 18px 10px;
   margin: 4px;
@@ -22,25 +24,25 @@
 }
 
 .lu-btn-default {
-  color: var(--lu-text-F);
-  border: 1px solid var(--lu-text-C);
-  background-color: var(--lu-text-A);
+  color: $var-text-F;
+  border: 1px solid $var-text-C;
+  background-color: $var-text-A;
 
   &:hover {
-    color: var(--lu-text-G);
-    background-color: var(--lu-text-C);
+    color: $var-text-G;
+    background-color: $var-text-C;
   }
 
   &:active {
-    color: var(--lu-text-G);
-    background-color: var(--lu-text-C);
-    border: 1px solid var(--lu-text-G);
+    color: $var-text-G;
+    background-color: $var-text-C;
+    border: 1px solid $var-text-G;
   }
 
   &:disabled {
-    color: var(--lu-text-B);
-    background-color: var(--lu-text-A);
-    border: 1px solid var(--lu-text-A);
+    color: $var-text-B;
+    background-color: $var-text-A;
+    border: 1px solid $var-text-A;
     cursor: not-allowed;
   }
 }
@@ -73,18 +75,18 @@ $themeStatusList : (primary, success, warning, danger);
   background-color: transparent;
   box-shadow: none;
   border: none;
-  color: var(--lu-text-F);
+  color: $var-text-F;
 
   &:hover {
-    color: var(--lu-text-E);
+    color: $var-text-E;
   }
 
   &:active {
-    color: var(--lu-text-G);
+    color: $var-text-G;
   }
 
   &:disabled {
-    color: var(--lu-text-C);
+    color: $var-text-C;
     cursor: not-allowed;
   }
 }
