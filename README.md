@@ -4,10 +4,6 @@
 </div> 
 
 <div align="center">
-  <h1></h1>
-</div>
-
-<div align="center">
 
 A comprehensive Vue UI components library based on the [BaiLuUI](https://).
 
