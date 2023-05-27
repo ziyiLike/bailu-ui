@@ -1,3 +1,4 @@
+/** export vars */
 @import './basic-var.scss';
 
 
@@ -6,7 +7,6 @@ $var-success: var(--lu-success-F);
 $var-warning: var(--lu-warning-F);
 $var-danger: var(--lu-danger-F);
 
-// export vars for use 
 $var-primary-A: var(--lu-primary-A);
 $var-primary-B: var(--lu-primary-B);
 $var-primary-C: var(--lu-primary-C);
