@@ -1,6 +1,6 @@
 
 <div align="center" style="background:#FFFFFF;height:300px">
-  <image  src="http://81.68.222.165:9000/ziyi-like/LogoText.png?Content-Type=image/png"  width=380 height=300/>
+  <image  src="http://81.68.222.165:9000/ziyi-like/LogoText.png?Content-Type=image/png"  width=365 height=300/>
 </div> 
 
 <div align="center">
