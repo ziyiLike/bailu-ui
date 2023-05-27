@@ -10,7 +10,10 @@ import LuIcon from '../../icon'
 import { buttonProps } from './buttonProps'
 
 defineOptions({
-  name: 'lu-button'
+  name: 'lu-button',
+  components: {
+    LuIcon
+  }
 })
 
 const props = defineProps(buttonProps())
