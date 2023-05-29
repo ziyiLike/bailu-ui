@@ -22,7 +22,7 @@ export default {
     }
   ],
   plugins: [
-    typescript(),
+    typescript({ tsconfig: './tsconfig.json', declaration: false }),
     commonjs()
   ]
 }

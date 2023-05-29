@@ -30,7 +30,8 @@
     "examples/**/*.d.ts",
     "examples/**/*.tsx",
     "examples/**/*.vue",
-    "packages",
+    "packages/*",
+    "packages/components/locale/lang/*.ts",
     "typings",
   ],
   "exclude": [

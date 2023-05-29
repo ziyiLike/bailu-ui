@@ -20,6 +20,8 @@ export default defineConfig({
     dts({
       entryRoot: './packages',
       insertTypesEntry: true,
+      // 所有文件全部打包，没引用的也打包
+      include: './packages/**/**/*',
       outputDir: './dist/typings'
     })
   ],

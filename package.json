@@ -24,6 +24,7 @@
     "dev": "vite serve --host 0.0.0.0  --port=10010",
     "pub": "npm version prerelease && pnpm build:helper && npm publish",
     "build:helper": "node build/build-helper.cjs",
+    "build:types": "tsc",
     "build:lang": "rollup --config --configPlugin typescript --bundleConfigAsCjs",
     "build": "vue-tsc --noEmit && vite build",
     "dist": "gulp -f build/build.ts",
