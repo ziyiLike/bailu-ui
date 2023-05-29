@@ -5,7 +5,6 @@
   margin: 4px;
   border-radius: 2px;
   cursor: pointer;
-  font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
   transition: 0.1s ease;
@@ -87,8 +86,8 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
 @each $themeStatus in (primary, success, warning, danger) {
   .lu-button-#{$themeStatus} {
     background-color: var(--lu-#{$themeStatus}-F);
-    box-shadow: 0 0 $var-size-1 var(--lu-#{$themeStatus}-F);
-    border: $var-size-1 solid var(--lu-#{$themeStatus}-F);
+    box-shadow: 0 0 1px var(--lu-#{$themeStatus}-F);
+    border: 1px solid var(--lu-#{$themeStatus}-F);
 
     &:hover {
       background-color: var(--lu-#{$themeStatus}-E);
