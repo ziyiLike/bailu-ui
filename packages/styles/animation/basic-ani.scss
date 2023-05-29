@@ -1,0 +1,28 @@
+/**
+ * @fileoverview basic-ani.scss
+*/
+
+// 无限旋转 - 顺时针
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// 无限旋转 - 逆时针
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(359deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+$ani-rotate: rotate 1s linear infinite;
+$ani-rotate-reverse: rotate-reverse 1s linear infinite;

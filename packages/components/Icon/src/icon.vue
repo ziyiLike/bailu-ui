@@ -1,5 +1,5 @@
 <template>
-  <i :class="iconName" :style="{ fontSize: iconSize, color: props.color }" />
+  <i :class="['lu-icon', iconName]" :style="{ fontSize: iconSize, color: props.color, width: iconSize, height: iconSize }" />
 </template>
 
 <script setup lang="tsx">

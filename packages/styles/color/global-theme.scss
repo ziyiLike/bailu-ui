@@ -75,6 +75,7 @@ $var-border-radius-none: 0;
 $var-border-radius-small: 2px;
 $var-border-radius-medium: 4px;
 $var-border-radius-large: 8px;
+$var-border-radius-round: 15px;
 $var-border-radius-circle: 50%;
 
 $var-border-style-solid: solid;
@@ -137,7 +138,6 @@ $var-size-mini: $var-size-6;
 $var-size-small: $var-size-7;
 $var-size-default: $var-size-8;
 $var-size-large: $var-size-9;
-
 
 $var-shadow-none: none;
 $var-shadow-special: 0 0 1px rgba(0, 0, 0, 0.3);

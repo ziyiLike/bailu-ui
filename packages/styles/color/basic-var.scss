@@ -5,8 +5,9 @@
  * 
 */
 @import '../scss/bailu-var.scss';
+@import '../animation/basic-ani.scss';
 
-$primary-G: #4651D9; // 点击按下，最深
+$primary-G: #2634f5; // 点击按下，最深
 $primary-F: lighten($primary-G, 10); // 常规
 $primary-E: lighten($primary-G, 16); // hover
 $primary-D: lighten($primary-G, 22); // 特殊
@@ -22,7 +23,7 @@ $primary-dark-C: darken($primary-C, 28);
 $primary-dark-B: darken($primary-C, 35);
 $primary-dark-A: darken($primary-C, 42);
 
-$success-G: #529B2E;
+$success-G: #419916;
 $success-F: lighten($success-G, 10);
 $success-E: lighten($success-G, 16);
 $success-D: lighten($success-G, 22);
@@ -38,7 +39,7 @@ $success-dark-C: darken($success-C, 28);
 $success-dark-B: darken($success-C, 35);
 $success-dark-A: darken($success-C, 42);
 
-$warning-G: #d49639;
+$warning-G: #cc861e;
 $warning-F: lighten($warning-G, 10);
 $warning-E: lighten($warning-G, 16);
 $warning-D: lighten($warning-G, 22);
@@ -55,7 +56,7 @@ $warning-dark-C: darken($warning-C, 28);
 $warning-dark-B: darken($warning-C, 35);
 $warning-dark-A: darken($warning-C, 42);
 
-$danger-G: #df4a4a;
+$danger-G: #e03333;
 $danger-F: lighten($danger-G, 10);
 $danger-E: lighten($danger-G, 16);
 $danger-D: lighten($danger-G, 22);
