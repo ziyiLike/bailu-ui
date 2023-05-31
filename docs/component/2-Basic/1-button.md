@@ -20,23 +20,6 @@ This is a button component
 
 :::
 
-## Disabled State
-
-:::demo You can set `disabled` state for button.
-
-```vue
-<template>
-  <div>
-    <lu-button disabled>Default</lu-button>
-    <lu-button type="primary" disabled>Primary</lu-button>
-    <lu-button type="success" disabled>Success</lu-button>
-    <lu-button type="warning" disabled>Warning</lu-button>
-    <lu-button type="danger" disabled>Danger</lu-button>
-  </div>
-</template>
-```
-:::
-
 
 ## Plain Style
 
@@ -54,6 +37,32 @@ This is a button component
 </template>
 ```
 :::
+
+## Disabled State
+
+:::demo You can set `disabled` state for button.
+
+```vue
+<template>
+  <div>
+    <lu-button disabled>Default</lu-button>
+    <lu-button type="primary" disabled>Primary</lu-button>
+    <lu-button type="success" disabled>Success</lu-button>
+    <lu-button type="warning" disabled>Warning</lu-button>
+    <lu-button type="danger" disabled>Danger</lu-button>
+  </div>
+
+  <div>
+    <lu-button disabled plain>Default</lu-button>
+    <lu-button type="primary" disabled plain>Primary</lu-button>
+    <lu-button type="success" disabled plain>Success</lu-button>
+    <lu-button type="warning" disabled plain>Warning</lu-button>
+    <lu-button type="danger" disabled  plain>Danger</lu-button>
+  </div>
+</template>
+```
+:::
+
 
 ## Button Size
 

@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /component/1-Guide/1-start
+      link: /component/1-Guide/1-Quick Start
     - theme: alt
       text: View on GitHub
       link: https://github.com/ziyiLike/bailu-ui

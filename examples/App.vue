@@ -78,9 +78,11 @@ import enUs from '../packages/components/locale/lang/en-us'
 
 const changTheme = (theme: string) => {
   if (theme === 'light') {
-    document.body.removeAttribute('bailu-theme');
+    // 移除html 的class dark
+    document.documentElement.classList.remove('dark')
   } else {
-    document.body.setAttribute('bailu-theme', 'dark')
+    // 给html 添加class dark
+    document.documentElement.classList.add('dark')
   }
 }
 
@@ -92,7 +94,7 @@ body {
   padding: 0;
 }
 
-body[bailu-theme="dark"] {
+html[class="dark"] {
   background-color: #17171A;
   color: #FFFFFFE6;
 }

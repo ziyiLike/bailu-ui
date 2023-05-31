@@ -3,9 +3,8 @@
 .lu-button {
   padding: 12px 12px;
   margin: 4px;
-  border-radius: 2px;
   cursor: pointer;
-  color: #ffffff;
+  color: #FFFFFF;
   white-space: nowrap;
   transition: 0.1s ease;
   -webkit-user-select: none;
@@ -61,27 +60,27 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
 .lu-button-default {
   color: $var-text-G;
   border: 1px solid $var-text-D;
-  background-color: $var-text-A;
+  background-color: var(--lu-white);
 
   &:hover {
-    color: $primary-G;
-    background-color: $primary-B;
-    border: 1px solid $primary-C;
+    color: $var-primary-F;
+    background-color: $primary-A;
+    border: 1px solid $var-primary-C;
   }
 
   &:active {
-    color: $primary-G;
-    background-color: $primary-B;
-    border: 1px solid $primary-G;
+    color: $var-primary-F;
+    background-color: $primary-A;
+    border: 1px solid $var-primary-G;
   }
 
   &:disabled {
-    color: $var-text-E;
-    background-color: $var-text-A;
-    border: 1px solid $var-text-C;
+    opacity: $var-opacity-5;
     cursor: not-allowed;
   }
 }
+
+
 
 @each $themeStatus in (primary, success, warning, danger) {
   .lu-button-#{$themeStatus} {
@@ -98,8 +97,7 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
     }
 
     &:disabled {
-      background-color: var(--lu-#{$themeStatus}-D);
-      border: 1px solid var(--lu-#{$themeStatus}-D);
+      opacity: $var-opacity-5;
       cursor: not-allowed;
     }
   }
@@ -107,7 +105,7 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
   .lu-button-plain-#{$themeStatus} {
     color: var(--lu-#{$themeStatus}-G);
     border: 1px solid var(--lu-#{$themeStatus}-F);
-    background-color: var(--lu-#{$themeStatus}-A);
+    background-color: var(--lu-#{$themeStatus}-B);
 
     &:hover {
       color: #FFFFFF;
@@ -120,10 +118,34 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
     }
 
     &:disabled {
-      color: var(--lu-#{$themeStatus}-D);
-      background-color: var(--lu-#{$themeStatus}-A);
-      border: 1px solid var(--lu-#{$themeStatus}-D);
+      opacity: $var-opacity-5;
       cursor: not-allowed;
+    }
+  }
+}
+
+
+@each $themeStatus in (primary, success, warning, danger) {
+  html[class="dark"] {
+    .lu-button-plain-#{$themeStatus} {
+      color: var(--lu-#{$themeStatus}-A);
+      border: 1px solid var(--lu-#{$themeStatus}-A);
+      background: var(--lu-#{$themeStatus}-G);
+
+      &:hover {
+        color: #FFFFFF;
+        background-color: var(--lu-#{$themeStatus}-F);
+      }
+
+      &:active {
+        color: var(--lu-#{$themeStatus}-G);
+        background-color: var(--lu-#{$themeStatus}-A);
+      }
+
+      &:disabled {
+        opacity: $var-opacity-5;
+        cursor: not-allowed;
+      }
     }
   }
 }

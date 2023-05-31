@@ -7,7 +7,10 @@
 @import '../scss/bailu-var.scss';
 @import '../animation/basic-ani.scss';
 
-$primary-G: #2634f5; // 点击按下，最深
+$color-white: #FFFFFF;
+$color-black: #242424;
+
+$primary-G: #0d5ff8; // 点击按下，最深
 $primary-F: lighten($primary-G, 10); // 常规
 $primary-E: lighten($primary-G, 16); // hover
 $primary-D: lighten($primary-G, 22); // 特殊
@@ -17,13 +20,13 @@ $primary-A: lighten($primary-G, 42); // 最浅，白底悬浮
 
 $primary-dark-G: $primary-C;
 $primary-dark-F: darken($primary-C, 10);
-$primary-dark-E: darken($primary-C, 16);
-$primary-dark-D: darken($primary-C, 22);
-$primary-dark-C: darken($primary-C, 28);
-$primary-dark-B: darken($primary-C, 35);
-$primary-dark-A: darken($primary-C, 42);
+$primary-dark-E: darken($primary-C, 12);
+$primary-dark-D: darken($primary-C, 14);
+$primary-dark-C: darken($primary-C, 16);
+$primary-dark-B: darken($primary-C, 18);
+$primary-dark-A: darken($primary-C, 20);
 
-$success-G: #419916;
+$success-G: #498a28;
 $success-F: lighten($success-G, 10);
 $success-E: lighten($success-G, 16);
 $success-D: lighten($success-G, 22);
@@ -33,13 +36,13 @@ $success-A: lighten($success-G, 42);
 
 $success-dark-G: $success-C;
 $success-dark-F: darken($success-C, 10);
-$success-dark-E: darken($success-C, 16);
-$success-dark-D: darken($success-C, 22);
-$success-dark-C: darken($success-C, 28);
-$success-dark-B: darken($success-C, 35);
-$success-dark-A: darken($success-C, 42);
+$success-dark-E: darken($success-C, 14);
+$success-dark-D: darken($success-C, 18);
+$success-dark-C: darken($success-C, 22);
+$success-dark-B: darken($success-C, 24);
+$success-dark-A: darken($success-C, 30);
 
-$warning-G: #cc861e;
+$warning-G: #e49b2d;
 $warning-F: lighten($warning-G, 10);
 $warning-E: lighten($warning-G, 16);
 $warning-D: lighten($warning-G, 22);
@@ -50,11 +53,11 @@ $warning-A: lighten($warning-G, 42);
 
 $warning-dark-G: $warning-C;
 $warning-dark-F: darken($warning-C, 10);
-$warning-dark-E: darken($warning-C, 16);
-$warning-dark-D: darken($warning-C, 22);
-$warning-dark-C: darken($warning-C, 28);
-$warning-dark-B: darken($warning-C, 35);
-$warning-dark-A: darken($warning-C, 42);
+$warning-dark-E: darken($warning-C, 14);
+$warning-dark-D: darken($warning-C, 18);
+$warning-dark-C: darken($warning-C, 32);
+$warning-dark-B: darken($warning-C, 36);
+$warning-dark-A: darken($warning-C, 40);
 
 $danger-G: #e03333;
 $danger-F: lighten($danger-G, 10);
@@ -66,13 +69,13 @@ $danger-A: lighten($danger-G, 42);
 
 $danger-dark-G: $danger-C;
 $danger-dark-F: darken($danger-C, 10);
-$danger-dark-E: darken($danger-C, 16);
-$danger-dark-D: darken($danger-C, 22);
-$danger-dark-C: darken($danger-C, 28);
-$danger-dark-B: darken($danger-C, 35);
-$danger-dark-A: darken($danger-C, 42);
+$danger-dark-E: darken($danger-C, 12);
+$danger-dark-D: darken($danger-C, 14);
+$danger-dark-C: darken($danger-C, 16);
+$danger-dark-B: darken($danger-C, 18);
+$danger-dark-A: darken($danger-C, 20);
 
-$text-G: #909399;
+$text-G: #636364;
 $text-F: lighten($text-G, 10);
 $text-E: lighten($text-G, 16);
 $text-D: lighten($text-G, 22);
@@ -124,6 +127,7 @@ $color-fill-dark-A: darken($color-fill-C, 42);
 
 
 #{$bailu-theme-tag} {
+  #{$bailu-prefix}white: #{$color-white};
   #{$bailu-prefix}primary-G: #{$primary-G};
   #{$bailu-prefix}primary-F: #{$primary-F};
   #{$bailu-prefix}primary-E: #{$primary-E};
@@ -182,7 +186,8 @@ $color-fill-dark-A: darken($color-fill-C, 42);
 
 }
 
-#{$bailu-theme-tag}[bailu-theme="dark"] {
+#{$bailu-theme-tag}[class="dark"] {
+  #{$bailu-prefix}white: #{$color-black};
 
   #{$bailu-prefix}primary-G: #{$primary-dark-G};
   #{$bailu-prefix}primary-F: #{$primary-dark-F};
@@ -240,4 +245,103 @@ $color-fill-dark-A: darken($color-fill-C, 42);
   #{$bailu-prefix}color-fill-C: #{$color-fill-dark-C};
   #{$bailu-prefix}color-fill-B: #{$color-fill-dark-B};
   #{$bailu-prefix}color-fill-A: #{$color-fill-dark-A};
+}
+
+#{$bailu-theme-tag} {
+  #{$bailu-prefix}border-none: 0;
+  #{$bailu-prefix}border-A: 1px;
+  #{$bailu-prefix}border-B: 2px;
+  #{$bailu-prefix}border-C: 3px;
+  #{$bailu-prefix}border-D: 4px;
+  #{$bailu-prefix}border-E: 5px;
+
+  #{$bailu-prefix}border-radius-none: 0;
+  #{$bailu-prefix}border-radius-small: 2px;
+  #{$bailu-prefix}border-radius-medium: 4px;
+  #{$bailu-prefix}border-radius-large: 8px;
+  #{$bailu-prefix}border-radius-round: 15px;
+  #{$bailu-prefix}border-radius-circle: 50%;
+
+  #{$bailu-prefix}border-style-solid: solid;
+  #{$bailu-prefix}border-style-dashed: dashed;
+  #{$bailu-prefix}border-style-dotted: dotted;
+
+  #{$bailu-prefix}size-none: 0;
+  #{$bailu-prefix}size-1: 4px;
+  #{$bailu-prefix}size-2: 8px;
+  #{$bailu-prefix}size-3: 12px;
+  #{$bailu-prefix}size-4: 16px;
+  #{$bailu-prefix}size-5: 20px;
+  #{$bailu-prefix}size-6: 24px;
+  #{$bailu-prefix}size-7: 28px;
+  #{$bailu-prefix}size-8: 32px;
+  #{$bailu-prefix}size-9: 36px;
+  #{$bailu-prefix}size-10: 40px;
+  #{$bailu-prefix}size-11: 44px;
+  #{$bailu-prefix}size-12: 48px;
+  #{$bailu-prefix}size-13: 52px;
+  #{$bailu-prefix}size-14: 56px;
+  #{$bailu-prefix}size-15: 60px;
+  #{$bailu-prefix}size-16: 64px;
+  #{$bailu-prefix}size-17: 68px;
+  #{$bailu-prefix}size-18: 72px;
+  #{$bailu-prefix}size-19: 76px;
+  #{$bailu-prefix}size-20: 80px;
+  #{$bailu-prefix}size-21: 84px;
+  #{$bailu-prefix}size-22: 88px;
+  #{$bailu-prefix}size-23: 92px;
+  #{$bailu-prefix}size-24: 96px;
+  #{$bailu-prefix}size-25: 100px;
+  #{$bailu-prefix}size-26: 104px;
+  #{$bailu-prefix}size-27: 108px;
+  #{$bailu-prefix}size-28: 112px;
+  #{$bailu-prefix}size-29: 116px;
+  #{$bailu-prefix}size-30: 120px;
+  #{$bailu-prefix}size-31: 124px;
+  #{$bailu-prefix}size-32: 128px;
+  #{$bailu-prefix}size-33: 132px;
+  #{$bailu-prefix}size-34: 136px;
+  #{$bailu-prefix}size-35: 140px;
+  #{$bailu-prefix}size-36: 144px;
+  #{$bailu-prefix}size-37: 148px;
+  #{$bailu-prefix}size-38: 152px;
+  #{$bailu-prefix}size-39: 156px;
+  #{$bailu-prefix}size-40: 160px;
+  #{$bailu-prefix}size-41: 164px;
+  #{$bailu-prefix}size-42: 168px;
+  #{$bailu-prefix}size-43: 172px;
+  #{$bailu-prefix}size-44: 176px;
+  #{$bailu-prefix}size-45: 180px;
+  #{$bailu-prefix}size-46: 184px;
+  #{$bailu-prefix}size-47: 188px;
+  #{$bailu-prefix}size-48: 192px;
+  #{$bailu-prefix}size-49: 196px;
+  #{$bailu-prefix}size-50: 200px;
+
+  #{$bailu-prefix}shadow-none: none;
+  #{$bailu-prefix}shadow-A: 0 0 1px rgba(0, 0, 0, 0.3);
+  #{$bailu-prefix}shadow-B: 0 8px 24px -2px rgb(0 0 0 / 5%);
+  #{$bailu-prefix}shadow-C: 0 0 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-D: 0 2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-center: 0 0 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-up: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-down: 0 2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-left: -2px 0 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-right: 2px 0 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-left-up: -2px -2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-left-down: -2px 2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-right-up: 2px -2px 5px rgba(0, 0, 0, 0.1);
+  #{$bailu-prefix}shadow-right-down: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  #{$bailu-prefix}opacity-none: 0;
+  #{$bailu-prefix}opacity-1: 10%;
+  #{$bailu-prefix}opacity-2: 20%;
+  #{$bailu-prefix}opacity-3: 30%;
+  #{$bailu-prefix}opacity-4: 40%;
+  #{$bailu-prefix}opacity-5: 50%;
+  #{$bailu-prefix}opacity-6: 60%;
+  #{$bailu-prefix}opacity-7: 70%;
+  #{$bailu-prefix}opacity-8: 80%;
+  #{$bailu-prefix}opacity-9: 90%;
+  #{$bailu-prefix}opacity-10: 100%;
 }

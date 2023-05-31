@@ -1,25 +1,25 @@
 html {
   --vp-c-bg-alt: #FFFFFF !important;
   --vp-sidebar-bg-color: #FFFFFF !important;
-  --vp-home-hero-name-color: #a076ec !important;
-  --vp-c-brand: #8042f3 !important;
-  --vp-c-brand-dark: #9f75ec !important;
-  --vp-button-brand-bg: #8042f3 !important;
-  --vp-button-brand-border: #c7aafc !important;
-  --vp-button-brand-hover-border: #8d56f3 !important;
-  --vp-button-brand-hover-bg: #874ef3 !important;
-  --vp-button-brand-active-border: #874ef3 !important;
-  --vp-button-brand-active-bg: #874ef3 !important;
-  --vp-button-brand-focus-border: #874ef3 !important;
-  --vp-button-brand-focus-bg: #874ef3 !important;
+  --vp-home-hero-name-color: var(--lu-primary-E) !important;
+  --vp-c-brand: var(--lu-primary-F) !important;
+  --vp-c-brand-dark: var(--lu-primary-D) !important;
+  --vp-button-brand-bg: var(--lu-primary-F) !important;
+  --vp-button-brand-border: var(--lu-primary-B) !important;
+  --vp-button-brand-hover-border: var(--lu-primary-F) !important;
+  --vp-button-brand-hover-bg: var(--lu-primary-F) !important;
+  --vp-button-brand-active-border: var(--lu-primary-F) !important;
+  --vp-button-brand-active-bg: var(--lu-primary-F) !important;
+  --vp-button-brand-focus-border: var(--lu-primary-F) !important;
+  --vp-button-brand-focus-bg: var(--lu-primary-F) !important;
   --vp-button-brand-disabled-border: #c7aafc !important;
 
   /* 标题 */
   --vp-home-hero-name-color: transparent !important;
-  --vp-home-hero-name-background: linear-gradient(135deg, #F6CEEC 10%, #874ef3 100%) !important;
+  --vp-home-hero-name-background: linear-gradient(135deg, var(--lu-primary-A) 10%, var(--lu-primary-F) 100%) !important;
 
   /* 图标背景 */
-  --vp-home-hero-image-background-image: linear-gradient(135deg, #F6CEEC 10%, #874ef3 100%) !important;
+  --vp-home-hero-image-background-image: linear-gradient(135deg, var(--lu-primary-A) 10%, var(--lu-primary-F) 100%) !important;
   --vp-home-hero-image-filter: blur(120px) !important;
   --vp-background-color: #f5f2fa !important;
 
@@ -32,25 +32,25 @@ html {
 html[class="dark"] {
   --vp-c-bg-alt: #242424 !important;
   --vp-sidebar-bg-color: #242424 !important;
-  --vp-home-hero-name-color: #a076ec !important;
-  --vp-c-brand: #9f75ec !important;
-  --vp-c-brand-dark: #9f75ec !important;
-  --vp-button-brand-bg: #8042f3 !important;
-  --vp-button-brand-border: #c7aafc !important;
-  --vp-button-brand-hover-border: #8d56f3 !important;
-  --vp-button-brand-hover-bg: #874ef3 !important;
-  --vp-button-brand-active-border: #874ef3 !important;
-  --vp-button-brand-active-bg: #874ef3 !important;
-  --vp-button-brand-focus-border: #874ef3 !important;
-  --vp-button-brand-focus-bg: #874ef3 !important;
+  --vp-home-hero-name-color: var(--lu-primary-E) !important;
+  --vp-c-brand: var(--lu-primary-E) !important;
+  --vp-c-brand-dark: var(--lu-primary-E) !important;
+  --vp-button-brand-bg: var(--lu-primary-G) !important;
+  --vp-button-brand-border: var(--lu-primary-F) !important;
+  --vp-button-brand-hover-border: var(--lu-primary-E) !important;
+  --vp-button-brand-hover-bg: var(--lu-primary-F) !important;
+  --vp-button-brand-active-border: var(--lu-primary-F) !important;
+  --vp-button-brand-active-bg: var(--lu-primary-F) !important;
+  --vp-button-brand-focus-border: var(--lu-primary-F) !important;
+  --vp-button-brand-focus-bg: var(--lu-primary-F) !important;
   --vp-button-brand-disabled-border: #c7aafc !important;
 
   /* 标题 */
   --vp-home-hero-name-color: transparent !important;
-  --vp-home-hero-name-background: linear-gradient(135deg, #F6CEEC 10%, #874ef3 100%) !important;
+  --vp-home-hero-name-background: linear-gradient(135deg, #F6CEEC 10%, var(--lu-primary-F) 100%) !important;
 
   /* 图标背景 */
-  --vp-home-hero-image-background-image: linear-gradient(135deg, #F6CEEC 10%, #874ef3 100%) !important;
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #F6CEEC 10%, var(--lu-primary-F) 100%) !important;
   --vp-home-hero-image-filter: blur(120px) !important;
   --vp-background-color: #232323 !important;
 
@@ -82,6 +82,24 @@ body {
     border-radius: 10px;
     background: var(--vp-thumb-track);
   }
+}
+
+.aside-container {
+  .active {
+    color: var(--vp-c-brand) !important;
+  }
+}
+
+.VPRow {
+  display: flex;
+  align-items: center;
+}
+
+.VPBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .VPNavBarTitle {
@@ -130,7 +148,7 @@ body {
 }
 
 .VPPluginSearch-search-group {
-  color: #a076ec;
+  color: var(--lu-primary-F);
 }
 
 .VPPluginSearch-flex-logo {
@@ -138,7 +156,7 @@ body {
 }
 
 .DocSearch-Search-Icon {
-  color: #a076ec;
+  color: var(--lu-primary-F);
 }
 
 .VPNavBar {
@@ -158,7 +176,7 @@ body {
   line-height: 2.2;
 
   &:hover {
-    color: #874ef3 !important;
+    color: var(--lu-primary-F) !important;
     transition: 0s !important;
   }
 }
@@ -194,8 +212,14 @@ tbody tr td {
   text-align: left;
   background: var(--vp-c-bg-alt) !important;
   border: none !important;
+  min-width: 130px !important;
 }
 
 tbody tr {
   border-top: 1px solid var(--vp-thumb) !important;
+}
+
+.content,
+.content-container {
+  min-width: 800px !important;
 }
