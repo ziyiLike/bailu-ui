@@ -7,7 +7,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: nginx-xlx
+    container_name: bailu-ui
     restart: always
     ports:
       - 10100:80
