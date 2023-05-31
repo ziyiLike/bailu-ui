@@ -5,7 +5,7 @@
 
 <div align="center">
 
-A comprehensive Vue UI components library based on the BaiLuUI.
+A comprehensive Vue UI components library based on the BaiLuUI
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ziyiLike/bailu-ui)
   
