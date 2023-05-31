@@ -1,0 +1,18 @@
+services:
+  build:
+    build: /www/bailu-ci/bailu-ui
+    container_name: bailu-ui-build
+    volumes:
+      - /www/bailu-ci/bailu-ui:/wwws/bailu/bailu-ui
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-xlx
+    restart: always
+    ports:
+      - 10100:80
+    volumes:
+      - /www/bailu-ci/bailu-ui/docs/.vitepress/dist:/www/bailu-ci/bailu-ui/docs/.vitepress/dist
+      - /www/bailu-ci/bailu-ui/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - build
