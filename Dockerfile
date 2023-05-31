@@ -1,5 +1,5 @@
 # vue Ci 构建流程
-FROM ccr.ccs.tencentyun.com/ystest/xf-node:v18.9.0 as build-stage
+FROM ccr.ccs.tencentyun.com/ystest/xf-node:v18.9.0-pnpm as build-stage
 
 MAINTAINER xf <1182900548@qq.com>
 
