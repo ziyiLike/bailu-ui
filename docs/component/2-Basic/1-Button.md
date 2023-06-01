@@ -90,7 +90,7 @@ This is a button component
     <lu-button shape="default" type="primary">Default</lu-button>
     <lu-button shape="round" type="primary">Round</lu-button>
     <lu-button type="primary" icon-size="15px" icon="TrashEmpty"></lu-button>
-    <lu-button shape="circle" type="primary" icon-size="15px" icon="SearchMagnifyingGlass"></lu-button>
+    <lu-button shape="circle" type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
   </div>
 </template>
 ```
@@ -103,7 +103,7 @@ This is a button component
 ```vue
 <template>
   <div>
-    <lu-button type="primary" icon-size="15px" icon="SearchMagnifyingGlass"></lu-button>
+    <lu-button type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
     <lu-button type="primary" icon-size="15px" icon="EditPencil01"></lu-button>
     <lu-button type="primary" icon-size="15px" icon="ShareAndroid"></lu-button>
      <lu-button type="primary" icon-size="15px" icon="TrashEmpty">删除</lu-button>
@@ -123,7 +123,7 @@ This is a button component
     <lu-button loading>Default</lu-button>
     <lu-button type="primary" loading>Primary</lu-button>
     <lu-button type="success" loading>Success</lu-button>
-    <lu-button shape="circle" loading type="primary" icon-size="15px" icon="SearchMagnifyingGlass"></lu-button>
+    <lu-button shape="circle" loading type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
   </div>
 </template>
 ```

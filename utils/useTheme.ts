@@ -7,7 +7,7 @@ const themeTypeList = ['default', 'primary', 'success', 'warning', 'danger']
 const sizeTypeList = ['mini', 'small', 'default', 'large']
 const shapeTypeList = ['default', 'plain', 'round', 'circle']
 
-export default (bindProps: any, type: 'theme' | 'size' | 'shape' | 'disabled', cssKey: string, propsKey?: string) => {
+export default (bindProps: any, type: 'theme' | 'size' | 'shape' | 'disabled' | 'loading', cssKey: string, propsKey?: string) => {
   switch (type) {
     case 'theme':
       return themeTypeFn(bindProps, cssKey, propsKey);
@@ -20,6 +20,9 @@ export default (bindProps: any, type: 'theme' | 'size' | 'shape' | 'disabled', c
 
     case 'disabled':
       return disableTypeFn(bindProps, cssKey, propsKey);
+
+    case 'loading':
+      return bindProps.loading ? cssKey + '-loading' : '';
   }
 }
 
@@ -43,6 +46,10 @@ const disableTypeFn = (bindProps: any, cssKey: string, propsKey: string = 'disab
   return bindProps[_propsKey] ? cssKey + '-disabled' : ''
 }
 
+const loadingTypeFn = (bindProps: any, cssKey: string, propsKey: string = 'loading') => {
+  const _propsKey = propsKey ? propsKey : 'loading'
+  return bindProps[_propsKey] ? cssKey + '-loading' : ''
+}
 
 
 

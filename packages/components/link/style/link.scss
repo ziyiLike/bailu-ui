@@ -1,0 +1,78 @@
+@import "../../../styles/color/global-theme.scss";
+
+.lu-link {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  padding: 12px 12px;
+  margin: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.1s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: $var-opacity-5;
+
+    &:hover {
+      opacity: $var-opacity-5 !important;
+    }
+  }
+
+  &-loading {
+    cursor: not-allowed;
+    opacity: $var-opacity-5;
+  }
+}
+
+@each $themeStatus in (primary, success, warning, danger) {
+  .lu-link-#{$themeStatus} {
+    color: var(--lu-#{$themeStatus}-F) !important;
+
+    &:hover {
+      opacity: $var-opacity-8;
+    }
+
+    &:active {
+      opacity: $var-opacity-5;
+    }
+  }
+}
+
+.lu-link-loading {
+  -webkit-animation: $ani-rotate;
+  animation: $ani-rotate;
+}
+
+@each $sizeKey,
+$sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-default, large: $var-size-large) {
+  .lu-link-size-#{$sizeKey} {
+    height: $sizeValue;
+    min-width: $sizeValue;
+  }
+}
+
+.lu-link-size-mini {
+  font-size: 12px;
+}
+
+.lu-link-default {
+  color: $var-text-G !important;
+
+  &:hover {
+    opacity: $var-opacity-8;
+  }
+
+  &:active {
+    opacity: $var-opacity-5;
+  }
+}
