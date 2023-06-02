@@ -7,5 +7,7 @@ export { default as LuIcon } from './components/icon'
 export type { LuIconInstance, LuIconProps } from './components/icon'
 export { default as LuLink } from './components/link'
 export type { LuLinkInstance, LuLinkProps } from './components/link'
+export { default as LuSpace } from './components/space'
+export type { LuSpaceInstance, LuSpaceProps } from './components/space'
 
-export type { } from './components';
+export type {} from './components'

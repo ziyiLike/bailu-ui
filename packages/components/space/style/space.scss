@@ -1,0 +1,18 @@
+@import "../../../styles/color/global-theme.scss";
+
+.lu-space {
+  width: 100%;
+  display: flex;
+
+  --lu-space-item-margin: 5px;
+
+  // 子盒子间隔 8px 取消第一个子盒子的 margin-left 间隔和最后一个子盒子的 margin-right 间隔
+  &>* {
+    margin-right: var(--lu-space-item-margin);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
