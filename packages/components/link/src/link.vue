@@ -6,7 +6,7 @@
     :target="isDisabled || isLoading ? '' : props.target"
   >
     <slot v-if="isLoading" name="loading">
-      <LuIcon class="lu-link-icon-loading" name="MoreGridSmall" size="25px"></LuIcon>
+      <LuIcon class="lu-link-icon-loading" name="MoreGridSmall" size="24px"></LuIcon>
     </slot>
     <slot v-else name="icon">
       <LuIcon v-if="props.icon" :name="props.icon" :color="props.iconColor" :size="props.iconSize"></LuIcon>
