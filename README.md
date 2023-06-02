@@ -27,6 +27,9 @@ npm install bailu-ui
 
 // with yarn
 yarn add bailu-ui
+
+// with pnpm
+pnpm add bailu-ui
 ```
 
 # Examples
