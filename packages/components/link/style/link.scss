@@ -31,6 +31,10 @@
   &-loading {
     cursor: not-allowed;
     opacity: $var-opacity-5;
+
+    &:hover {
+      opacity: $var-opacity-5 !important;
+    }
   }
 }
 
@@ -48,7 +52,7 @@
   }
 }
 
-.lu-link-loading {
+.lu-link-icon-loading {
   -webkit-animation: $ani-rotate;
   animation: $ani-rotate;
 }

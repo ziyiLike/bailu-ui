@@ -77,6 +77,12 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
   &:disabled {
     opacity: $var-opacity-5;
     cursor: not-allowed;
+
+    &:hover {
+      color: $var-text-G;
+      background-color: var(--lu-white);
+      border: 1px solid $var-text-D;
+    }
   }
 }
 
@@ -97,8 +103,13 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
     }
 
     &:disabled {
+      // pointer-events: none;
       opacity: $var-opacity-5;
       cursor: not-allowed;
+
+      &:hover {
+        background-color: var(--lu-#{$themeStatus}-F);
+      }
     }
   }
 
@@ -120,6 +131,11 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
     &:disabled {
       opacity: $var-opacity-5;
       cursor: not-allowed;
+
+      &:hover {
+        color: var(--lu-#{$themeStatus}-G);
+        background-color: var(--lu-#{$themeStatus}-B);
+      }
     }
   }
 }
@@ -145,6 +161,11 @@ $sizeValue in (mini: $var-size-mini, small: $var-size-small, default: $var-size-
       &:disabled {
         opacity: $var-opacity-5;
         cursor: not-allowed;
+
+        &:hover {
+          color: var(--lu-#{$themeStatus}-A);
+          background-color: var(--lu-#{$themeStatus}-G);
+        }
       }
     }
   }

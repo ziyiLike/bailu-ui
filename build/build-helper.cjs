@@ -15,7 +15,7 @@ if (!fs.existsSync(jsonPath)) {
 main({
   name: 'BaiLuUI',
   version: require('../package.json').version,
-  entry: 'docs/*.md',
+  entry: 'docs/component/*/*.md',
   outDir: 'dist/json',
   reComponentName,
   reDocUrl,

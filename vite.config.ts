@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
   define: {
@@ -10,7 +10,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "/packages/styles/scss/style.scss";`,
+        additionalData: `@import "/packages/styles/scss/style.scss";`
       }
     }
   },
@@ -29,19 +29,19 @@ export default defineConfig({
     alias: {
       '@': '/examples',
       '~': './'
-    },
+    }
   },
   build: {
     lib: {
       entry: './packages/index.ts', // 打包路径
       name: 'BaiLuUI',
-      fileName: (format) => `bailu-ui.${format}.js`,
+      fileName: format => `bailu-ui.${format}.js`
     },
     rollupOptions: {
-      external: ["vue"],
+      external: ['vue'],
       output: {
         globals: {
-          vue: "vue"
+          vue: 'vue'
         }
       }
     },

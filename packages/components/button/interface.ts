@@ -1,3 +1,11 @@
 export interface LuButtonProps {
-  type?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text';
+  type?: 'default'|'primary' | 'success' | 'warning' | 'danger';
+  size?: 'mini' | 'small' | 'default' | 'large';
+  shape?: 'default' | 'circle' | 'round';
+  plain?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+  icon?: string;
+  iconColor?: string;
+  iconSize?: string | number;
 }

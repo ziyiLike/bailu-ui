@@ -1,13 +1,12 @@
 <template>
-  <a :class="[
-    'lu-link',
-    u(props, 'theme', 'lu-link'),
-    u(props, 'size', 'lu-link-size'),
-    u(props, 'disabled', 'lu-link'),
-    u(props, 'loading', 'lu-link'),
-  ]" :disabled="isDisabled || isLoading" href="https://www.baidu.com">
+  <a
+    :class="['lu-link', u(props, 'theme', 'lu-link'), u(props, 'disabled', 'lu-link'), u(props, 'loading', 'lu-link')]"
+    :disabled="isDisabled || isLoading"
+    :href="props.href ? props.href : ''"
+    :target="isDisabled || isLoading ? '' : props.target"
+  >
     <slot v-if="isLoading" name="loading">
-      <LuIcon class="lu-link-loading" name="MoreGridSmall" size="24px"></LuIcon>
+      <LuIcon class="lu-link-icon-loading" name="MoreGridSmall" size="24px"></LuIcon>
     </slot>
     <slot v-else name="icon">
       <LuIcon v-if="props.icon" :name="props.icon" :color="props.iconColor" :size="props.iconSize"></LuIcon>
@@ -19,14 +18,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, useSlots } from 'vue'
 import LuIcon from '../../icon'
 import { linkProps } from './linkProps'
 import u from '../../../../utils/useTheme'
 
-defineOptions({ name: 'lu-link' })
-
-const slot = defineSlots()
+const slot = useSlots()
 
 const props = defineProps(linkProps())
 
@@ -40,7 +37,6 @@ const hasIcon = computed(() => {
   }
   return !!props.icon || !!slot.icon
 })
-
 </script>
 
 <style lang="scss">

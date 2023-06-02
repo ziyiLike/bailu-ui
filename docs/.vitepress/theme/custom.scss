@@ -231,3 +231,30 @@ tbody tr {
 .content-container {
   max-width: calc(var(--vp-layout-max-width) - 50px) !important;
 }
+
+
+.meta {
+  border-top: none !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.end {
+  align-items: flex-end;
+  justify-content: flex-end;
+}

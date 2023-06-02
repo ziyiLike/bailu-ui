@@ -10,7 +10,10 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     // 添加图标
-    ['link', { rel: 'icon', href: 'http://81.68.222.165:9000/ziyi-like/BaiLuLogoWithoutText.png?Content-Type=image/png' }],
+    [
+      'link',
+      { rel: 'icon', href: 'http://81.68.222.165:9000/ziyi-like/BaiLuLogoWithoutText.png?Content-Type=image/png' }
+    ]
   ],
   themeConfig: {
     // @ts-ignore
@@ -30,12 +33,14 @@ export default defineConfig({
     },
     logo: 'http://81.68.222.165:9000/ziyi-like/BaiLuLogoWithoutText.png?Content-Type=image/png',
     siteTitle: 'Bailu UI',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/ziyiLike/bailu-ui' }
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/ziyiLike/bailu-ui' }],
     nav: NavList,
     sidebar: {
-      '/component/': SidebarComponent,
+      '/component/': SidebarComponent
+    },
+    editLink: {
+      pattern: 'https://github.com/ziyiLike/bailu-ui/tree/master/docs/:path',
+      text: '在 GitHub 上编辑此页'
     },
     footer: {
       message: '© 2023 ziyiLike',
@@ -43,10 +48,10 @@ export default defineConfig({
     }
   },
   markdown: {
-    config: (md) => {
+    config: md => {
       md.use(demoBlockPlugin, {
         cssPreprocessor: 'scss'
-      });
+      })
     }
   }
 })

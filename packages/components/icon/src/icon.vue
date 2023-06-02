@@ -1,17 +1,16 @@
 <template>
-  <i :class="['lu-icon', iconName]" :style="{ fontSize: iconSize, color: props.color, width: iconSize, height: iconSize }" />
+  <i
+    :class="['lu-icon', iconName]"
+    :style="{ fontSize: iconSize, color: props.color, width: iconSize, height: iconSize }"
+  />
 </template>
 
 <script setup lang="tsx">
 /**
  * Open source icon library: https://coolicons.cool/
  */
-import { computed } from 'vue';
-import { iconProps } from './iconProps';
-
-defineOptions({
-  name: 'lu-icon'
-})
+import { computed } from 'vue'
+import { iconProps } from './iconProps'
 
 const props = defineProps(iconProps())
 

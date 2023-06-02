@@ -9,17 +9,16 @@ The basic style of the link.
 ```vue
 <template>
   <div>
-   <lu-link type="default">Default</lu-link>
-    <lu-link type="primary">Primary</lu-link>
-    <lu-link type="success">Success</lu-link>
-    <lu-link type="warning">Warning</lu-link>
-    <lu-link type="danger">Danger</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="default">Default</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="primary">Primary</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="success">Success</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="warning">Warning</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="danger">Danger</lu-link>
   </div>
 </template>
 ```
 
 :::
-
 
 ## Disabled State
 
@@ -28,33 +27,16 @@ The basic style of the link.
 ```vue
 <template>
   <div>
-    <lu-link disabled>Default</lu-link>
-    <lu-link type="primary" disabled>Primary</lu-link>
-    <lu-link type="success" disabled>Success</lu-link>
-    <lu-link type="warning" disabled>Warning</lu-link>
-    <lu-link type="danger" disabled>Danger</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" disabled>Default</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="primary" disabled>Primary</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="success" disabled>Success</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="warning" disabled>Warning</lu-link>
+    <lu-link href="/component/2-Basic/3-Link.html" target="_blank" type="danger" disabled>Danger</lu-link>
   </div>
 </template>
 ```
+
 :::
-
-
-## link Size
-
-:::demo You can set `mini` 、 `small`、 `default` 、`large` size for link.
-
-```vue
-<template>
-  <div>
-    <lu-link size="mini" type="primary">Mini</lu-link>
-    <lu-link size="small" type="primary">Small</lu-link>
-    <lu-link type="primary">Default</lu-link>
-    <lu-link size="large" type="primary">Large</lu-link>
-  </div>
-</template>
-```
-:::
-
 
 ## Icon link
 
@@ -66,12 +48,12 @@ The basic style of the link.
     <lu-link type="primary" icon-size="15px" icon="SearchGlass"></lu-link>
     <lu-link type="primary" icon-size="15px" icon="EditPencil01"></lu-link>
     <lu-link type="primary" icon-size="15px" icon="ShareAndroid"></lu-link>
-     <lu-link type="primary" icon-size="15px" icon="TrashEmpty">删除</lu-link>
+    <lu-link type="primary" icon-size="15px" icon="TrashEmpty">删除</lu-link>
   </div>
 </template>
 ```
-:::
 
+:::
 
 ## Loading State
 
@@ -79,47 +61,54 @@ The basic style of the link.
 
 ```vue
 <template>
-  <div>
+  <div class="vcenter">
     <lu-link loading>Default</lu-link>
     <lu-link type="primary" loading>Primary</lu-link>
     <lu-link type="success" loading>Success</lu-link>
-    <lu-link shape="circle" loading type="primary" icon-size="15px" icon="SearchGlass"></lu-link>
+    <lu-link loading type="primary" icon-size="15px" icon="SearchGlass"></lu-link>
+    <lu-link :loading="loading" @click="loadingClick" icon="AddPlus" type="primary">Click Me</lu-link>
   </div>
 </template>
-```
-:::
 
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const loading = ref<boolean>(false)
+
+const loadingClick = () => {
+  loading.value = true
+  setTimeout(() => {
+    loading.value = false
+  }, 2000)
+}
+</script>
+```
+
+:::
 
 ## Props
 
-| Name | Description | Type | Default |
-|----- |------------ |----- | ------- |
-| type | link type | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'default' | default |
-| size | link size | 'mini' \| 'small' \| 'default' \| 'large' | default |
-| disabled | disabled state | boolean | false |
-| loading | loading state | boolean | false |
-| icon | icon name | string | - |
-| iconColor | icon color | string | - |
-| iconSize | icon size | string | - |
+| Name      | Description    | Type                                                         | Default |
+| --------- | -------------- | ------------------------------------------------------------ | ------- |
+| type      | link type      | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'default' | default |
+| href      | link href      | string                                                       | -       |
+| target    | link target    | string                                                       | -       |
+| disabled  | disabled state | boolean                                                      | false   |
+| loading   | loading state  | boolean                                                      | false   |
+| icon      | icon name      | string                                                       | -       |
+| iconColor | icon color     | string                                                       | -       |
+| iconSize  | icon size      | string                                                       | -       |
 
+## Events
 
-
-<!-- ## Events
-
-| Name | Description |
-|----- | ----------- |
-| change | triggers when fixed state changed | -->
+| Name  | Description                       |
+| ----- | --------------------------------- |
+| click | emitted when the link is clicked. |
 
 ## Slots
 
-| Name | Description | Type | Subtags |
-| ---- | ----------- | ---- | ------- |
-| default | link content | any | - |
-| loading | loading content | any | - |
-| icon | icon content | any | - |
-
-<!-- ## Directives
-
-| Name | Description | Type |
-| ---- | ----------- | ---- |
-| v-loading | show animation while loading data | boolean | -->
+| Name    | Description     | Type | Subtags |
+| ------- | --------------- | ---- | ------- |
+| default | link content    | any  | -       |
+| loading | loading content | any  | -       |
+| icon    | icon content    | any  | -       |
