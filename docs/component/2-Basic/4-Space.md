@@ -50,9 +50,9 @@ The space component is used to separate content in a consistent way. It can be u
 
 ## Props
 
-| Name | Description | Type                 | Default |
-| ---- | ----------- | -------------------- | ------- |
-| size | size        | `number` \| `string` | `5`     |
+| Name | Description | Type             | Default |
+| ---- | ----------- | ---------------- | ------- |
+| size | size        | number \| string | `5`     |
 
 ## Slots
 
