@@ -14,6 +14,10 @@ const slot = useSlots()
 
 const size = computed(() => {
   if (!props.size) return '5px'
-  return typeof props.size === 'string' ? props.size : `${props.size}px`
+  return typeof props.size === 'string'
+    ? props.size.endsWith('px')
+      ? props.size
+      : `${props.size}px`
+    : `${props.size}px`
 })
 </script>

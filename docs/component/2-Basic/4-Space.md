@@ -4,11 +4,11 @@ The space component is used to separate content in a consistent way. It can be u
 
 ## Basic Usage
 
-:::demo You can use the `size` property to set the spacing size.
+:::demo You can use the `lu-space` component to separate content in a consistent way.
 
 ```vue
 <template>
-  <lu-space :size="20">
+  <lu-space>
     <lu-button type="primary"> button1 </lu-button>
     <lu-button type="primary"> button2 </lu-button>
     <lu-button type="primary"> button3 </lu-button>
@@ -18,11 +18,41 @@ The space component is used to separate content in a consistent way. It can be u
 
 :::
 
+## Space Size
+
+:::demo You can use the `size` property to set the size of the space.
+
+```vue
+<template>
+  <div>
+    <lu-space size="50">
+      <lu-button type="primary"> button1 </lu-button>
+      <lu-button type="primary"> button2 </lu-button>
+      <lu-button type="primary"> button3 </lu-button>
+    </lu-space>
+
+    <lu-space size="10px" class="vp-mt-2">
+      <lu-button type="primary"> button1 </lu-button>
+      <lu-button type="primary"> button2 </lu-button>
+      <lu-button type="primary"> button3 </lu-button>
+    </lu-space>
+
+    <lu-space :size="2" class="vp-mt-2">
+      <lu-button type="primary"> button1 </lu-button>
+      <lu-button type="primary"> button2 </lu-button>
+      <lu-button type="primary"> button3 </lu-button>
+    </lu-space>
+  </div>
+</template>
+```
+
+:::
+
 ## Props
 
-| Name | Description | Type                                                         | Default |
-| ---- | ----------- | ------------------------------------------------------------ | ------- |
-| type | button type | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'default' | default |
+| Name | Description | Type                 | Default |
+| ---- | ----------- | -------------------- | ------- |
+| size | size        | `number` \| `string` | `5`     |
 
 ## Slots
 

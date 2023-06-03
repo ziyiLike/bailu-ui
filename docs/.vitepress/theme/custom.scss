@@ -258,3 +258,9 @@ tbody tr {
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+@for $i from 1 through 20 {
+  .vp-mt-#{$i} {
+    margin-top: #{$i * 4}px !important;
+  }
+}
