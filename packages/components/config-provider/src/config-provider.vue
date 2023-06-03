@@ -3,17 +3,13 @@
 </template>
 
 <script setup lang="tsx">
-import { Slots, computed, getCurrentInstance, provide, reactive, toRefs } from 'vue';
+import { computed, getCurrentInstance, provide, reactive, toRefs, useSlots } from 'vue'
 import { configProviderProps } from './configProviderProps'
-import { configProviderInjectKey } from '../context';
-import { getLocale } from '../../locale';
-
-defineOptions({
-  name: "lu-config-provider"
-})
+import { configProviderInjectKey } from '../context'
+import { getLocale } from '../../locale'
 
 const props = defineProps(configProviderProps())
-const slots = defineSlots()
+const slots = useSlots()
 
 const { locale } = toRefs(props)
 
@@ -31,6 +27,4 @@ if (instance) {
 } else {
   provide(configProviderInjectKey, contextConfig)
 }
-
-
 </script>

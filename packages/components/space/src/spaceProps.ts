@@ -1,3 +1,5 @@
+import { PropType } from 'vue'
+
 export const spaceProps = {
   // @zh 间距大小
   // @en Spacing size

@@ -1,8 +1,9 @@
-import configProvider from './src/config-provider.vue';
-import useWidthInstall from '../../../utils/useWidthInstall';
+import configProvider from './src/config-provider.vue'
+import useWidthInstall from '../../../utils/useWidthInstall'
 
-const LuConfigProvider = useWidthInstall(configProvider);
+configProvider.name = 'lu-config-provider'
+const LuConfigProvider = useWidthInstall(configProvider)
 
-export type LuConfigProviderInstance = InstanceType<typeof configProvider>;
+export type LuConfigProviderInstance = InstanceType<typeof configProvider>
 
-export default LuConfigProvider;
+export default LuConfigProvider
