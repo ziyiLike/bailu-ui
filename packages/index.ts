@@ -9,5 +9,7 @@ export { default as LuLink } from './components/link'
 export type { LuLinkInstance, LuLinkProps } from './components/link'
 export { default as LuSpace } from './components/space'
 export type { LuSpaceInstance, LuSpaceProps } from './components/space'
+export { LuRadio, LuRadioGroup } from './components/radio'
+export type { LuRadioInstance, LuRadioProps, LuRadioGroupInstance, LuRadioGroupProps } from './components/radio'
 
 export type {} from './components'

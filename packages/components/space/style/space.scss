@@ -1,18 +1,75 @@
 @import "../../../styles/color/global-theme.scss";
 
 .lu-space {
-  width: 100%;
   display: flex;
 
-  --lu-space-item-margin: 5px;
+
+  --lu-space-item-margin: 0;
 
   // 子盒子间隔 8px 取消第一个子盒子的 margin-left 间隔和最后一个子盒子的 margin-right 间隔
-  &>* {
-    margin-right: var(--lu-space-item-margin);
+  &-horizontal {
+    flex-direction: row;
 
-    &:last-child {
-      margin-right: 0;
+    &>* {
+      margin-right: var(--lu-space-item-margin);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
+
+  &-vertical {
+    flex-direction: column;
+
+    &>* {
+      margin-bottom: var(--lu-space-item-margin);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-auto {
+    align-items: auto;
+  }
+
+  &-fixed {
+    align-items: flex-start;
+  }
+
+  &-align-center {
+    align-items: center;
+  }
+
+  &-align-start {
+    align-items: flex-start;
+  }
+
+  &-align-end {
+    align-items: flex-end;
+  }
+
+  &-align-baseline {
+    align-items: baseline;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
 
 }

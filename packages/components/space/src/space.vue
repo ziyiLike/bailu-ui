@@ -1,5 +1,5 @@
 <template>
-  <div class="lu-space" :style="{ '--lu-space-item-margin': size }">
+  <div :class="classList" :style="{ '--lu-space-item-margin': size }">
     <slot />
   </div>
 </template>
@@ -19,5 +19,20 @@ const size = computed(() => {
       ? props.size
       : `${props.size}px`
     : `${props.size}px`
+})
+
+const deraction = computed(() => {
+  if (!props.direction) return 'lu-space-horizontal'
+  return props.direction === 'vertical' ? 'lu-space-vertical' : 'lu-space-horizontal'
+})
+
+const classList = computed(() => {
+  return [
+    'lu-space',
+    deraction.value,
+    props.auto ? 'lu-space-auto' : 'lu-space-fixed',
+    props.align && `lu-space-align-${props.align}`,
+    props.wrap && `lu-space-${props.wrap}`
+  ]
 })
 </script>

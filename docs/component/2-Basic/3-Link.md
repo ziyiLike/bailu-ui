@@ -90,7 +90,7 @@ const loadingClick = () => {
 
 | Name      | Description    | Type                                                         | Default |
 | --------- | -------------- | ------------------------------------------------------------ | ------- |
-| type      | link type      | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'default' | default |
+| type      | link type      | `primary` \| `success` \| `warning` \| `danger` \| `default` | default |
 | href      | link href      | string                                                       | -       |
 | target    | link target    | string                                                       | -       |
 | disabled  | disabled state | boolean                                                      | false   |

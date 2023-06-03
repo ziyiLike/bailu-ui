@@ -2,6 +2,9 @@
 @import './basic-var.scss';
 
 
+$var-color-white: var(--lu-color-white);
+$var-color-black: var(--lu-color-black);
+
 $var-primary: var(--lu-primary-F);
 $var-success: var(--lu-success-F);
 $var-warning: var(--lu-warning-F);

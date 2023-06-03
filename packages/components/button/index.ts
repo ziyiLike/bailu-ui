@@ -1,8 +1,8 @@
 import Button from './src/button.vue'
-import useWidthInstall from '../../../utils/useWidthInstall'
+import useWithInstall from '../../utils/useWithInstall'
 
 Button.name = 'lu-button'
-const LuButton = useWidthInstall(Button)
+const LuButton = useWithInstall(Button)
 
 export type LuButtonInstance = InstanceType<typeof Button>
 export type { LuButtonProps } from './interface'

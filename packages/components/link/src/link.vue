@@ -21,7 +21,7 @@
 import { computed, useSlots } from 'vue'
 import LuIcon from '../../icon'
 import { linkProps } from './linkProps'
-import u from '../../../../utils/useTheme'
+import u from '../../../utils/useTheme'
 
 const slot = useSlots()
 

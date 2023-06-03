@@ -1,8 +1,8 @@
 import Space from './src/space.vue'
-import useWidthInstall from '../../../utils/useWidthInstall'
+import useWithInstall from '../../utils/useWithInstall'
 
 Space.name = 'lu-space'
-const LuSpace = useWidthInstall(Space)
+const LuSpace = useWithInstall(Space)
 
 export type LuSpaceInstance = InstanceType<typeof Space>
 export type { LuSpaceProps } from './interface'

@@ -1,0 +1,44 @@
+@import "../../../styles/color/global-theme.scss";
+
+.lu-radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  padding: 12px 12px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: $var-opacity-5;
+
+    &:hover {
+      opacity: $var-opacity-5 !important;
+    }
+  }
+
+  &-loading {
+    cursor: not-allowed;
+    opacity: $var-opacity-5;
+
+    &:hover {
+      opacity: $var-opacity-5 !important;
+    }
+  }
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &>* {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

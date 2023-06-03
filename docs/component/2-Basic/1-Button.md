@@ -150,9 +150,9 @@ const loadingClick = () => {
 
 | Name      | Description    | Type                                                         | Default |
 | --------- | -------------- | ------------------------------------------------------------ | ------- |
-| type      | button type    | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'default' | default |
-| size      | button size    | 'mini' \| 'small' \| 'default' \| 'large'                    | default |
-| shape     | button shape   | 'default' \| 'circle' \| 'round'                             | default |
+| type      | button type    | `primary` \| `success` \| `warning` \| `danger` \| `default` | default |
+| size      | button size    | `mini` \| `small` \| `default` \| `large`                    | default |
+| shape     | button shape   | `default` \| `circle` \| `round`                             | default |
 | plain     | plain style    | boolean                                                      | false   |
 | disabled  | disabled state | boolean                                                      | false   |
 | loading   | loading state  | boolean                                                      | false   |

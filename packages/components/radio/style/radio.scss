@@ -1,0 +1,53 @@
+@import "../../../styles/color/global-theme.scss";
+
+.lu-radio {
+
+  &>input[type=radio] {
+    display: none;
+  }
+
+  &__mark {
+    display: inline-block;
+    border-radius: 50%;
+    border: $var-size-1 $var-border-style-solid $var-primary-A;
+    background-color: $var-primary-A;
+    margin-right: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &-checked {
+      background-color: $var-primary-F;
+    }
+
+    &:hover {
+      background-color: $var-primary-F;
+    }
+
+    &-disabled {
+      opacity: $var-opacity-5;
+    }
+  }
+
+  &__label {
+    color: $var-text-G;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &-disabled {
+      color: $var-text-D;
+      cursor: not-allowed;
+      opacity: $var-opacity-5;
+    }
+  }
+}
+
+
+@each $sizeKey,
+$sizeValue in (mini: 12px, small: 14px, default: 16px, large: 18px) {
+  .lu-radio__mark-size-#{$sizeKey} {
+    height: $sizeValue;
+    width: $sizeValue;
+  }
+}

@@ -48,11 +48,65 @@ The space component is used to separate content in a consistent way. It can be u
 
 :::
 
+## Space vertical
+
+:::demo You can use the `direction` property to set the `vertical` of the space.
+
+```vue
+<template>
+  <div>
+    <lu-space direction="vertical">
+      <lu-button type="primary"> button1 </lu-button>
+      <lu-button type="primary"> button2 </lu-button>
+      <lu-button type="primary"> button3 </lu-button>
+    </lu-space>
+
+    <lu-space direction="vertical" auto class="vp-mt-4">
+      <lu-button type="primary"> button1 </lu-button>
+      <lu-button type="primary"> button2 </lu-button>
+      <lu-button type="primary"> button3 </lu-button>
+    </lu-space>
+  </div>
+</template>
+```
+
+:::
+
+## Space Align
+
+:::demo You can use the `align` property to set the `align` of the space.
+
+```vue
+<template>
+  <div>
+    <lu-radio-group v-model="align">
+      <lu-radio value="start">start</lu-radio>
+      <lu-radio value="end">end</lu-radio>
+      <lu-radio value="center">center</lu-radio>
+    </lu-radio-group>
+
+    <lu-space :align="align">
+      <lu-button size="mini" type="primary"> button1 </lu-button>
+      <lu-button size="small" type="primary"> button2 </lu-button>
+      <lu-button size="large" type="primary"> button3 </lu-button>
+    </lu-space>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const align = ref('start')
+</script>
+```
+
+:::
+
 ## Props
 
 | Name | Description | Type             | Default |
 | ---- | ----------- | ---------------- | ------- |
-| size | size        | number \| string | `5`     |
+| size | size        | number \| string | 5px     |
 
 ## Slots
 

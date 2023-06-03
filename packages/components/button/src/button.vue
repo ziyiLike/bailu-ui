@@ -27,7 +27,7 @@
 import { computed, useSlots } from 'vue'
 import LuIcon from '../../icon'
 import { buttonProps } from './buttonProps'
-import u from '../../../../utils/useTheme'
+import u from '../../../utils/useTheme'
 
 const slot = useSlots()
 
