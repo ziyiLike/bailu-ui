@@ -42,3 +42,62 @@
     }
   }
 }
+
+.lu-radio-group-button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 5px;
+  background: $var-color-fill-B;
+  border-radius: $var-border-radius-small;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: $var-opacity-5;
+
+    &:hover {
+      opacity: $var-opacity-5 !important;
+    }
+  }
+
+  &>* {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .lu-radio__mark {
+    display: none
+  }
+
+  .lu-radio__label {
+    display: inline-flex;
+    padding: 6px 12px;
+    height: 100%;
+    border-radius: $var-border-radius-small;
+    background-color: var(--lu-color-white);
+    color: $var-text-G;
+    font-size: 14px;
+    // line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &-disabled {
+      color: $var-text-D;
+      cursor: not-allowed;
+      opacity: $var-opacity-5;
+    }
+
+    &-checked {
+      background-color: $var-primary-F;
+      color: $var-color-white;
+    }
+  }
+}

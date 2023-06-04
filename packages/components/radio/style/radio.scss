@@ -7,8 +7,8 @@
   }
 
   &:hover {
-    .lu-radio__mark {
-      background-color: $var-primary-F;
+    .lu-radio__mark:not(.lu-radio__mark-disabled, .lu-radio__mark-checked) {
+      background-color: $var-primary-C;
     }
   }
 
@@ -25,11 +25,8 @@
       background-color: $var-primary-F;
     }
 
-    &:hover {
-      background-color: $var-primary-F;
-    }
-
     &-disabled {
+      cursor: not-allowed;
       opacity: $var-opacity-5;
     }
   }

@@ -3,7 +3,7 @@ import { PropType } from 'vue'
 export const spaceProps = {
   // @zh 间距大小
   // @en Spacing size
-  size: String as PropType<string | number>,
+  size: [String, Number] as PropType<string | number>,
   // @zh 间距方向
   // @en Spacing direction
   direction: String as PropType<'horizontal' | 'vertical'>,

@@ -79,13 +79,13 @@ The space component is used to separate content in a consistent way. It can be u
 ```vue
 <template>
   <div>
-    <lu-radio-group v-model="align">
+    <lu-radio-group button v-model="align">
       <lu-radio value="start">start</lu-radio>
       <lu-radio value="end">end</lu-radio>
       <lu-radio value="center">center</lu-radio>
     </lu-radio-group>
 
-    <lu-space :align="align">
+    <lu-space class="vp-mt-5" :align="align">
       <lu-button size="mini" type="primary"> button1 </lu-button>
       <lu-button size="small" type="primary"> button2 </lu-button>
       <lu-button size="large" type="primary"> button3 </lu-button>

@@ -6,7 +6,10 @@ export const radioProps = {
   size: String as PropType<'mini' | 'small' | 'default' | 'large'>,
   // zh : 是否禁用
   // en : Whether radio is disabled
-  disabled: Boolean,
+  disabled: {
+    type: Boolean as PropType<boolean>,
+    default: false
+  },
   // zh : 是否选中
   // en : Whether radio is selected
   modelValue: [Boolean, String, Number, Object],

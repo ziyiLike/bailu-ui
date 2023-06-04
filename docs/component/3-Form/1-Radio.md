@@ -54,18 +54,26 @@ const checked = ref<boolean>(true)
 
 ```vue
 <template>
-  <div>bind value: {{ checked }}</div>
-  <lu-radio-group v-model="checked">
-    <lu-radio value="Option A"></lu-radio>
-    <lu-radio value="Option B"></lu-radio>
-    <lu-radio value="Option C"></lu-radio>
+  <div>Disabled:</div>
+  <lu-radio-group button v-model="disabled">
+    <lu-radio :value="true"></lu-radio>
+    <lu-radio :value="false"></lu-radio>
+  </lu-radio-group>
+
+  <div class="vp-mt-5">The bind value is: {{ checked }}</div>
+  <lu-radio-group :disabled="disabled" v-model="checked">
+    <lu-radio value="A">Option A</lu-radio>
+    <lu-radio disabled value="B">Option B</lu-radio>
+    <lu-radio value="C">Option C</lu-radio>
   </lu-radio-group>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const checked = ref<string>('Option A')
+const disabled = ref<boolean>(true)
+
+const checked = ref<string>('A')
 </script>
 ```
 

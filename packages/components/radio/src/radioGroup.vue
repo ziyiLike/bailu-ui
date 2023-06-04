@@ -16,7 +16,9 @@ export default defineComponent({
           ...vnode,
           props: reactive({
             ...vnode.props,
+            disabled: props.disabled || vnode.props?.disabled,
             modelValue: modelValue.value,
+            __defaultDisabled: vnode.props?.disabled === '' ? true : !!vnode.props?.disabled,
             __changeBindValue: value => (modelValue.value = value)
           })
         }
@@ -25,6 +27,7 @@ export default defineComponent({
       return vnode
     })
 
+    // bind modelValue
     watch(
       () => modelValue.value,
       val => {
@@ -39,8 +42,27 @@ export default defineComponent({
       }
     )
 
+    // bind disabled
+    watch(
+      () => props.disabled,
+      val => {
+        childSlots?.map(vnode => {
+          // @ts-ignore
+          if (vnode.type.name === 'lu-radio') {
+            // 兼容组件和普通节点
+            vnode.props && !vnode.props.__defaultDisabled && (vnode.props.disabled = val)
+            vnode.component?.props && !vnode.component.props.__defaultDisabled && (vnode.component.props.disabled = val)
+          }
+
+          return vnode
+        })
+      }
+    )
+
+    const classList = [props.button ? 'lu-radio-group-button' : 'lu-radio-group']
+
     return () => {
-      return <div class="lu-radio-group">{childSlots}</div>
+      return <div class={classList}>{childSlots}</div>
     }
   }
 })

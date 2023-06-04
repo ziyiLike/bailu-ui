@@ -29,10 +29,6 @@ export default defineComponent({
 
     const labelContent = slots.default ? slots.default() : h('span', {}, props.value)
 
-    const labelNode: VNode = (
-      <span class={['lu-radio__label', props.disabled && 'lu-radio__label-disabled']}>{labelContent}</span>
-    )
-
     return () => (
       <div class={classList.value} onClick={radioClick}>
         <input type="radio" />
@@ -45,7 +41,15 @@ export default defineComponent({
             u(props, 'size', 'lu-radio__mark-size')
           ]}
         />
-        {labelNode}
+        <span
+          class={[
+            'lu-radio__label',
+            props.disabled && 'lu-radio__label-disabled',
+            modelValue.value === radioValue.value && 'lu-radio__label-checked'
+          ]}
+        >
+          {labelContent}
+        </span>
       </div>
     )
   }
