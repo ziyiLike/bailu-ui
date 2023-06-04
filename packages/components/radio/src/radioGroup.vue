@@ -1,9 +1,7 @@
 <script lang="tsx">
-import { useSlots, defineComponent } from 'vue'
+import { defineComponent, reactive, watch } from 'vue'
 import { useModel } from '../../../utils/useModel'
 import { radioGroupProps } from './radioGroupProps'
-
-// 给 slot 中的 radio 组件添加 modelValue
 
 export default defineComponent({
   name: 'lu-radio-group',
@@ -11,8 +9,38 @@ export default defineComponent({
   setup(props, cxt) {
     const modelValue = useModel(props, 'modelValue')
 
+    const childSlots = cxt.slots.default?.().map(vnode => {
+      // @ts-ignore
+      if (vnode.type.name === 'lu-radio') {
+        return {
+          ...vnode,
+          props: reactive({
+            ...vnode.props,
+            modelValue: modelValue.value,
+            __changeBindValue: value => (modelValue.value = value)
+          })
+        }
+      }
+
+      return vnode
+    })
+
+    watch(
+      () => modelValue.value,
+      val => {
+        childSlots?.map(vnode => {
+          // @ts-ignore
+          if (vnode.type.name === 'lu-radio') {
+            // 兼容组件和普通节点
+            vnode.props && (vnode.props.modelValue = val)
+            vnode.component?.props && (vnode.component.props.modelValue = val)
+          }
+        })
+      }
+    )
+
     return () => {
-      return <div class="lu-radio-group">{cxt.slots.default?.()}</div>
+      return <div class="lu-radio-group">{childSlots}</div>
     }
   }
 })

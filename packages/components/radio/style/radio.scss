@@ -6,6 +6,12 @@
     display: none;
   }
 
+  &:hover {
+    .lu-radio__mark {
+      background-color: $var-primary-F;
+    }
+  }
+
   &__mark {
     display: inline-block;
     border-radius: 50%;

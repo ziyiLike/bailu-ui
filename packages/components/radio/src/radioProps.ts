@@ -9,8 +9,14 @@ export const radioProps = {
   disabled: Boolean,
   // zh : 是否选中
   // en : Whether radio is selected
-  modelValue: Boolean,
+  modelValue: [Boolean, String, Number, Object],
   // zh : 选中时的值，当使用类似 1 和 0 来判断是否选中时会很有用
   // en : The value of radio when checked
-  value: [String, Number, Boolean] as PropType<string | number | boolean>
+  value: {
+    type: [String, Number, Boolean] as PropType<string | number | boolean>,
+    default: undefined
+  },
+  // zh : 父级Group传值事件
+  // en : Parent Group value
+  __changeBindValue: Function as PropType<(value: string | number | boolean) => void>
 }

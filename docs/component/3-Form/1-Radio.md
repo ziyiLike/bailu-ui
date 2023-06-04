@@ -11,7 +11,8 @@ The radio component is used to select one option from multiple options.
   <div>
     <lu-radio v-model="checked">Start</lu-radio>
     <lu-radio disabled value="End"></lu-radio>
-    <lu-radio :modelValue="true" value="Default Checked"></lu-radio>
+    <lu-radio modelValue="Default Checked" value="Default Checked"></lu-radio>
+    <lu-radio :modelValue="true">Default Click</lu-radio>
   </div>
 </template>
 
@@ -53,10 +54,11 @@ const checked = ref<boolean>(true)
 
 ```vue
 <template>
+  <div>bind value: {{ checked }}</div>
   <lu-radio-group v-model="checked">
-    <lu-radio value="Option A">Option A</lu-radio>
-    <lu-radio value="Option B">Option B</lu-radio>
-    <lu-radio value="Option C">Option C</lu-radio>
+    <lu-radio value="Option A"></lu-radio>
+    <lu-radio value="Option B"></lu-radio>
+    <lu-radio value="Option C"></lu-radio>
   </lu-radio-group>
 </template>
 
