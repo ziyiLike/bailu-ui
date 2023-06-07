@@ -10,7 +10,7 @@ export function useFullVNode(instance: VNode[] | undefined) {
   const _fullVNode: VNode[] = []
   const _getFullVNode = (instance: VNode[]) => {
     instance.forEach(vnode => {
-      if (typeof vnode.type === 'symbol' && vnode.type.description === 'Fragment') {
+      if (typeof vnode.type === 'symbol') {
         _getFullVNode(vnode.children as VNode[])
       } else {
         _fullVNode.push(vnode)
