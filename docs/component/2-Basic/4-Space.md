@@ -80,15 +80,22 @@ The space component is used to separate content in a consistent way. It can be u
 <template>
   <div>
     <lu-radio-group button v-model="align">
-      <lu-radio value="start">start</lu-radio>
-      <lu-radio value="end">end</lu-radio>
-      <lu-radio value="center">center</lu-radio>
+      <lu-radio value="start"></lu-radio>
+      <lu-radio value="end"></lu-radio>
+      <lu-radio value="center"></lu-radio>
+      <lu-radio value="baseline"></lu-radio>
     </lu-radio-group>
 
     <lu-space class="vp-mt-5" :align="align">
       <lu-button size="mini" type="primary"> button1 </lu-button>
       <lu-button size="small" type="primary"> button2 </lu-button>
       <lu-button size="large" type="primary"> button3 </lu-button>
+      <lu-radio value="start"></lu-radio>
+
+      <lu-space direction="vertical">
+        <lu-button type="primary"> button1 </lu-button>
+        <lu-button type="primary"> button2 </lu-button>
+      </lu-space>
     </lu-space>
   </div>
 </template>
@@ -96,8 +103,90 @@ The space component is used to separate content in a consistent way. It can be u
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const align = ref('start')
+const align = ref('')
 </script>
+```
+
+:::
+
+## Space Wrap
+
+:::demo You can use the `wrap` property to set the `wrap` of the space, or use `size` property to set the `wrap` of the space.
+
+```vue
+<template>
+  <div>
+    <lu-radio-group button v-model="wrap">
+      <lu-radio v-for="item in wrapList" :key="item" :value="item"></lu-radio>
+    </lu-radio-group>
+
+    <lu-space class="vp-mt-5" :wrap="wrap">
+      <lu-button v-for="i in 10" type="primary"> button{{ i }} </lu-button>
+    </lu-space>
+
+    <lu-space class="vp-mt-5" :wrap="wrap" size="10px">
+      <lu-button v-for="i in 10" type="primary"> button{{ i }} </lu-button>
+    </lu-space>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const wrapList = ['nowrap', 'wrap', 'wrap-reverse']
+const wrap = ref('')
+</script>
+```
+
+:::
+
+## Space Separator
+
+:::demo You can use the `separator` property to set the `separator` of the space.
+
+```vue
+<template>
+  <div>
+    <lu-radio-group button v-model="separator">
+      <lu-radio value="|"></lu-radio>
+      <lu-radio value=">"></lu-radio>
+      <lu-radio value="-"></lu-radio>
+      <lu-radio value="*"></lu-radio>
+      <lu-radio value="&"></lu-radio>
+    </lu-radio-group>
+
+    <lu-space class="vp-mt-5" :separator="separator">
+      <lu-button v-for="i in 5" type="primary"> button{{ i }} </lu-button>
+    </lu-space>
+
+    <lu-space class="vp-mt-5" :separator="separatorDemo">
+      <lu-button v-for="i in 5" type="primary"> button{{ i }} </lu-button>
+    </lu-space>
+
+    <lu-space class="vp-mt-5">
+      <template #separatorSlot>
+        <lu-icon name="LineL"></lu-icon>
+      </template>
+      <lu-button v-for="i in 5" type="primary"> button{{ i }} </lu-button>
+    </lu-space>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, h } from 'vue'
+
+const separator = ref('|')
+
+const separatorDemo = h('span', { class: 'text-red' }, ':')
+// And you can use the Tsx syntax
+// const separatorDemo = () => <span class="text-red">:</span>
+</script>
+
+<style scoped>
+.text-red {
+  color: red;
+}
+</style>
 ```
 
 :::

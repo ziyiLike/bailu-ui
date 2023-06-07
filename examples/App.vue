@@ -43,7 +43,7 @@
   </div>
 
   <div class="row">
-    <h3> Size</h3>
+    <h3>Size</h3>
   </div>
   <div class="row center">
     <lu-button size="mini" type="primary">Mini</lu-button>
@@ -53,7 +53,7 @@
   </div>
 
   <div class="row">
-    <h3> Shape</h3>
+    <h3>Shape</h3>
   </div>
   <div class="row center">
     <lu-button shape="default" type="primary">Default</lu-button>
@@ -63,18 +63,24 @@
   </div>
 
   <div class="row">
-    <h3> Loading </h3>
+    <h3>Loading</h3>
   </div>
   <div class="row center">
     <lu-button shape="default" loading>Default</lu-button>
     <lu-button type="primary" loading icon-size="15px" icon="TrashEmpty">删除</lu-button>
     <lu-button shape="circle" loading type="primary" icon-size="15px" icon="SearchMagnifyingGlass"></lu-button>
   </div>
+
+  <lu-space class="vp-mt-5" :separator="separatorDemo">
+    <lu-button v-for="i in 5" type="primary"> button{{ i }} </lu-button>
+  </lu-space>
 </template>
 
 <script lang="tsx" setup>
 import enUs from '../packages/components/locale/lang/en-us'
+import { h } from 'vue'
 
+const separatorDemo = () => <lu-icon name="CloseSM"></lu-icon>
 
 const changTheme = (theme: string) => {
   if (theme === 'light') {
@@ -85,7 +91,6 @@ const changTheme = (theme: string) => {
     document.documentElement.classList.add('dark')
   }
 }
-
 </script>
 
 <style lang="scss">
@@ -94,9 +99,9 @@ body {
   padding: 0;
 }
 
-html[class="dark"] {
-  background-color: #17171A;
-  color: #FFFFFFE6;
+html[class='dark'] {
+  background-color: #17171a;
+  color: #ffffffe6;
 }
 
 h2 {
@@ -108,7 +113,7 @@ h2 {
     content: '';
     height: 1px;
     width: 100vw;
-    background-color: #0000001A;
+    background-color: #0000001a;
     display: block;
     position: absolute;
     bottom: -10px;

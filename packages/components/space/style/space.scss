@@ -3,10 +3,8 @@
 .lu-space {
   display: flex;
 
-
   --lu-space-item-margin: 0;
 
-  // 子盒子间隔 8px 取消第一个子盒子的 margin-left 间隔和最后一个子盒子的 margin-right 间隔
   &-horizontal {
     flex-direction: row;
 
@@ -43,7 +41,7 @@
     align-items: flex-start;
   }
 
-  &-align-center {
+  &-align-center:not(.lu-space-vertical) {
     align-items: center;
   }
 
@@ -61,6 +59,10 @@
 
   &-wrap {
     flex-wrap: wrap;
+
+    &>* {
+      margin-bottom: var(--lu-space-item-margin);
+    }
   }
 
   &-nowrap {
@@ -69,6 +71,10 @@
 
   &-wrap-reverse {
     flex-wrap: wrap-reverse;
+
+    &>* {
+      margin-bottom: var(--lu-space-item-margin);
+    }
   }
 
 

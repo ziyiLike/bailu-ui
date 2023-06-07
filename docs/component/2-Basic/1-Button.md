@@ -8,13 +8,13 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button type="default">Default</lu-button>
     <lu-button type="primary">Primary</lu-button>
     <lu-button type="success">Success</lu-button>
     <lu-button type="warning">Warning</lu-button>
     <lu-button type="danger">Danger</lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -26,13 +26,13 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button plain>Default</lu-button>
     <lu-button type="primary" plain>Primary</lu-button>
     <lu-button type="success" plain>Success</lu-button>
     <lu-button type="warning" plain>Warning</lu-button>
     <lu-button type="danger" plain>Danger</lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -44,21 +44,21 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button disabled>Default</lu-button>
     <lu-button type="primary" disabled>Primary</lu-button>
     <lu-button type="success" disabled>Success</lu-button>
     <lu-button type="warning" disabled>Warning</lu-button>
     <lu-button type="danger" disabled>Danger</lu-button>
-  </div>
+  </lu-space>
 
-  <div>
+  <lu-space class="vp-mt-2">
     <lu-button disabled plain>Default</lu-button>
     <lu-button type="primary" disabled plain>Primary</lu-button>
     <lu-button type="success" disabled plain>Success</lu-button>
     <lu-button type="warning" disabled plain>Warning</lu-button>
     <lu-button type="danger" disabled plain>Danger</lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -70,12 +70,12 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button size="mini" type="primary">Mini</lu-button>
     <lu-button size="small" type="primary">Small</lu-button>
     <lu-button type="primary">Default</lu-button>
     <lu-button size="large" type="primary">Large</lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -87,12 +87,12 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button shape="default" type="primary">Default</lu-button>
     <lu-button shape="round" type="primary">Round</lu-button>
     <lu-button type="primary" icon-size="15px" icon="TrashEmpty"></lu-button>
     <lu-button shape="circle" type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -104,12 +104,12 @@ This is a button component
 
 ```vue
 <template>
-  <div>
+  <lu-space>
     <lu-button type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
     <lu-button type="primary" icon-size="15px" icon="EditPencil01"></lu-button>
     <lu-button type="primary" icon-size="15px" icon="ShareAndroid"></lu-button>
     <lu-button type="primary" icon-size="15px" icon="TrashEmpty">删除</lu-button>
-  </div>
+  </lu-space>
 </template>
 ```
 
@@ -121,13 +121,13 @@ This is a button component
 
 ```vue
 <template>
-  <div class="vcenter">
+  <lu-space class="vcenter">
     <lu-button loading>Default</lu-button>
     <lu-button type="primary" loading>Primary</lu-button>
     <lu-button type="success" loading>Success</lu-button>
     <lu-button shape="circle" loading type="primary" icon-size="15px" icon="SearchGlass"></lu-button>
     <lu-button :loading="loading" @click="loadingClick" type="primary" icon="AddPlus">Click Me</lu-button>
-  </div>
+  </lu-space>
 </template>
 
 <script setup lang="ts">

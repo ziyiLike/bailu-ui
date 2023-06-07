@@ -1,6 +1,7 @@
 <script lang="tsx">
 import { defineComponent, reactive, watch } from 'vue'
 import { useModel } from '../../../utils/useModel'
+import { useFullVNode } from '../../../utils/useFullVNode'
 import { radioGroupProps } from './radioGroupProps'
 
 export default defineComponent({
@@ -9,7 +10,7 @@ export default defineComponent({
   setup(props, cxt) {
     const modelValue = useModel(props, 'modelValue')
 
-    const childSlots = cxt.slots.default?.().map(vnode => {
+    const childSlots = useFullVNode(cxt.slots.default?.()).map(vnode => {
       // @ts-ignore
       if (vnode.type.name === 'lu-radio') {
         return {

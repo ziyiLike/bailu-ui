@@ -12,14 +12,17 @@ export const spaceProps = {
   auto: Boolean as PropType<boolean>,
   // @zh 间距对齐方式
   // @en Spacing alignment
-  align: String as PropType<'start' | 'end' | 'center' | 'baseline'>,
+  align: {
+    type: String as PropType<'start' | 'end' | 'center' | 'baseline'>,
+    default: 'center'
+  },
   // @zh 间距包裹方式
   // @en Spacing wrap
   wrap: String as PropType<'wrap' | 'nowrap' | 'wrap-reverse'>,
-  // @zh 间距缩进
-  // @en Spacing indent
-  indent: String as PropType<string | number>,
-  // @zh 间距缩进方向
-  // @en Spacing indent direction
-  indentDirection: String as PropType<'left' | 'right'>
+  // @zh 间隔符
+  // @en Spacing separator
+  separator: [String, Object, Function] as PropType<string | JSX.Element | (() => JSX.Element)>,
+  // @zh 间隔符插槽
+  // @en Spacing separator slot
+  separatorSlot: Function as PropType<() => JSX.Element>
 }
