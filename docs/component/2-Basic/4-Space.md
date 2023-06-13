@@ -193,12 +193,17 @@ const separatorDemo = h('span', { class: 'text-red' }, ':')
 
 ## Props
 
-| Name | Description | Type             | Default |
-| ---- | ----------- | ---------------- | ------- |
-| size | size        | number \| string | 5px     |
+| Name      | Description | Type                                       | Default    |
+| --------- | ----------- | ------------------------------------------ | ---------- |
+| size      | size        | number \| string                           | 5px        |
+| wrap      | wrap        | `nowrap` \| `wrap` \| `wrap-reverse`       | nowrap     |
+| align     | align       | `start` \| `end` \| `center` \| `baseline` | center     |
+| direction | direction   | `horizontal` \| `vertical`                 | horizontal |
+| auto      | auto        | boolean                                    | false      |
+| separator | separator   | string \| VNode                            | -          |
 
 ## Slots
 
-| Name    | Description | Type | Subtags |
-| ------- | ----------- | ---- | ------- |
-| default | content     | any  | -       |
+| Name          | Description    | Type | Subtags |
+| ------------- | -------------- | ---- | ------- |
+| separatorSlot | separator slot | -    | -       |
