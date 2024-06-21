@@ -17,6 +17,9 @@ English | [简体中文](./README.zh-CN.md)
 
 </div>
 
+# Docs
+[docs](http://ziyilike.com:10100/)
+
 # Installation
 
 Available as an [npm package](https://www.npmjs.com/package/bailu-ui)
