@@ -18,7 +18,7 @@ English | [简体中文](./README.zh-CN.md)
 </div>
 
 # Docs
-[docs](http://ziyilike.com:10100/)
+[docs](http://bailuui.ziyilike.com/)
 
 # Installation
 
@@ -47,3 +47,5 @@ const app = createApp(App);
 app.use(BaiLuUI);
 app.mount('#app');
 ```
+
+写UI组件没前途 = = 。，放弃了
