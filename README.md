@@ -18,7 +18,7 @@ English | [简体中文](./README.zh-CN.md)
 </div>
 
 # Docs
-[docs](http://bailuui.ziyilike.com/)
+[docs](https://bailuui.ziyilike.com/)
 
 # Installation
 
